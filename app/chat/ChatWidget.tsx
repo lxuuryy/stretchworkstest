@@ -1,7 +1,7 @@
 "use client";
 
 import { useChat } from "@ai-sdk/react";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, useMemo } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { DefaultChatTransport } from "ai";
 import type { UIMessage } from "ai";
@@ -101,26 +101,32 @@ function Message({ msg }: { msg: UIMessage }) {
 }
 
 export default function ChatWidget() {
+  // Mount gate — guarantees the server render and the first client render
+  // both produce nothing, so there is no hydration mismatch in production.
+  const [mounted, setMounted] = useState(false);
   const [open, setOpen] = useState(false);
-  const [storedMessages, setStoredMessages] = useState<UIMessage[]>([]);
   const [loaded, setLoaded] = useState(false);
+  const [input, setInput] = useState("");
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
 
+  // Create the transport once — not on every render.
+  const transport = useMemo(() => new DefaultChatTransport({ api: "/api/chat" }), []);
+
+  const { messages, sendMessage, setMessages, status } = useChat({ transport });
+
   useEffect(() => {
+    setMounted(true);
+    // Restore saved session into the chat state.
     try {
       const raw = localStorage.getItem(SESSION_KEY);
-      if (raw) setStoredMessages(JSON.parse(raw));
+      if (raw) {
+        const parsed = JSON.parse(raw);
+        if (Array.isArray(parsed) && parsed.length) setMessages(parsed);
+      }
     } catch {}
     setLoaded(true);
-  }, []);
-
-  const [input, setInput] = useState("");
-
-  const { messages, sendMessage, status } = useChat({
-    transport: new DefaultChatTransport({ api: "/api/chat" }),
-    messages: storedMessages,
-  });
+  }, [setMessages]);
 
   useEffect(() => {
     if (!loaded) return;
@@ -151,6 +157,9 @@ export default function ChatWidget() {
     "I'm recovering from an injury",
     "My hips and back feel locked up",
   ];
+
+  // Don't render anything until mounted on the client (avoids hydration mismatch)
+  if (!mounted) return null;
 
   return (
     <>

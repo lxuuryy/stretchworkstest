@@ -8,18 +8,58 @@ export default {
       return fetch(request);
     }
 
-    // ─── Paths that go to stretchworkstest.vercel.app ─────────────────────
-    const vercelPaths = [
-      '/forms',
-      '/contact',
-      '/test-page',
-      // StretchWorks pages
+    const VERCEL = 'https://stretchworkstest.vercel.app';
+
+    // ── Stretch page routes ────────────────────────────────────────────────
+    const stretchPages = [
       '/athletic',
       '/recovery-and-injury-support',
       '/50-60-stiffness-and-healthy-ageing',
-      // AI chat API
-      '/api/chat',
-      // Public assets used by the stretch pages
+      '/forms',
+      '/contact',
+      '/test-page',
+    ];
+
+    const isStretchPage = stretchPages.some(p =>
+      path === p || path.startsWith(p + '/')
+    );
+
+    if (isStretchPage) {
+      return fetch(VERCEL + path + url.search, {
+        method: request.method,
+        headers: request.headers,
+        body: request.method !== 'GET' && request.method !== 'HEAD'
+          ? request.body
+          : undefined,
+      });
+    }
+
+    // ── API route for the chat widget ──────────────────────────────────────
+    if (path.startsWith('/api/chat')) {
+      return fetch(VERCEL + path + url.search, {
+        method: request.method,
+        headers: request.headers,
+        body: request.body,
+      });
+    }
+
+    // ── Next.js assets — only proxy to Vercel if Referer is a stretch page ─
+    // This prevents breaking the main chatwithresume.app assets.
+    if (path.startsWith('/_next/')) {
+      const referer = request.headers.get('referer') || '';
+      const isStretchReferer = stretchPages.some(p => referer.includes(p));
+
+      if (isStretchReferer) {
+        return fetch(VERCEL + path + url.search, {
+          method: 'GET',
+          headers: request.headers,
+        });
+      }
+      // Not from a stretch page → fall through to main site
+    }
+
+    // ── Public files — only proxy to Vercel if Referer is a stretch page ───
+    const stretchAssets = [
       '/homeImage.png',
       '/firstVisit.jpg',
       '/Youtube.mp4',
@@ -27,39 +67,27 @@ export default {
       '/logo.png',
     ];
 
-    const goesToVercel = vercelPaths.some(p =>
-      path === p || path.startsWith(p + '/')
-    );
-
-    if (goesToVercel) {
-      return fetch('https://stretchworkstest.vercel.app' + path + url.search, {
-        method: request.method,
-        headers: request.headers,
-        body: request.method !== 'GET' && request.method !== 'HEAD' ? request.body : undefined,
-      });
-    }
-
-    // ─── Next.js static assets — try Vercel first, fall back to main site ──
-    // Both sites may have /_next/ paths. Vercel assets have unique chunk hashes
-    // so the right one returns 200 and the wrong one returns 404.
-    if (path.startsWith('/_next/')) {
-      const vercelRes = await fetch(
-        'https://stretchworkstest.vercel.app' + path + url.search,
-        { method: 'GET', headers: request.headers }
-      );
-      if (vercelRes.status !== 404) {
-        return vercelRes;
+    if (stretchAssets.includes(path)) {
+      const referer = request.headers.get('referer') || '';
+      const isStretchReferer = stretchPages.some(p => referer.includes(p));
+      if (isStretchReferer) {
+        return fetch(VERCEL + path, {
+          method: 'GET',
+          headers: request.headers,
+        });
       }
-      // 404 from Vercel → fall through to main site below
+      // Not from a stretch page → fall through to main site
     }
 
-    // ─── Everything else → chatwithresume.app ─────────────────────────────
+    // ── Everything else → main chatwithresume.app ──────────────────────────
     const newRequest = new Request(
       'https://chatwithresume.app' + path + url.search,
       {
         method: request.method,
         headers: { ...Object.fromEntries(request.headers), 'x-proxied': 'true' },
-        body: request.body,
+        body: request.method !== 'GET' && request.method !== 'HEAD'
+          ? request.body
+          : undefined,
       }
     );
     return fetch(newRequest);
