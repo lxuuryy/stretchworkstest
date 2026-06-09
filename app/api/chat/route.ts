@@ -41,6 +41,16 @@ const consultationTool = tool({
   },
 });
 
+const CORS_HEADERS = {
+  "Access-Control-Allow-Origin": "*",
+  "Access-Control-Allow-Methods": "POST, OPTIONS",
+  "Access-Control-Allow-Headers": "Content-Type",
+};
+
+export async function OPTIONS() {
+  return new Response(null, { status: 204, headers: CORS_HEADERS });
+}
+
 export async function POST(req: Request) {
   const body = await req.json();
   const messages: UIMessage[] = Array.isArray(body.messages) ? body.messages : [];
@@ -72,5 +82,5 @@ Guidelines:
     stopWhen: stepCountIs(5),
   });
 
-  return result.toUIMessageStreamResponse();
+  return result.toUIMessageStreamResponse({ headers: CORS_HEADERS });
 }

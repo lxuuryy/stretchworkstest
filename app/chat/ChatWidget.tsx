@@ -111,7 +111,13 @@ export default function ChatWidget() {
   const inputRef = useRef<HTMLInputElement>(null);
 
   // Create the transport once — not on every render.
-  const transport = useMemo(() => new DefaultChatTransport({ api: "/api/chat" }), []);
+  // In production the pages are served via the Cloudflare proxy on chatwithresume.app,
+  // so call the API directly on Vercel (CORS-enabled) to bypass the Worker entirely.
+  const transport = useMemo(() => {
+    const apiBase =
+      process.env.NODE_ENV === "production" ? "https://stretchworkstest.vercel.app" : "";
+    return new DefaultChatTransport({ api: `${apiBase}/api/chat` });
+  }, []);
 
   const { messages, sendMessage, setMessages, status } = useChat({ transport });
 
