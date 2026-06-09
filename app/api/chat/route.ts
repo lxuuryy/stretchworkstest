@@ -1,5 +1,3 @@
-export const runtime = "edge";
-
 import { createAnthropic } from "@ai-sdk/anthropic";
 import { streamText, tool, UIMessage, convertToModelMessages, stepCountIs } from "ai";
 
@@ -82,5 +80,13 @@ Guidelines:
     stopWhen: stepCountIs(5),
   });
 
-  return result.toUIMessageStreamResponse({ headers: CORS_HEADERS });
+  return result.toUIMessageStreamResponse({
+    headers: CORS_HEADERS,
+    onError: (error) => {
+      // Surface the real error instead of the default masked message,
+      // and log it so it shows in the Vercel function logs.
+      console.error("chat route error:", error);
+      return error instanceof Error ? error.message : String(error);
+    },
+  });
 }
