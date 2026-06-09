@@ -275,8 +275,8 @@ export default function ChatWidget() {
                 onChange={(e) => setInput(e.target.value)}
                 placeholder="What's going on?"
                 disabled={isStreaming}
-                className="flex-1 rounded-xl px-3.5 py-2.5 text-[13px] text-white placeholder-white/25 outline-none transition-colors"
-                style={{ background: "rgba(255,255,255,0.06)", border: "1px solid rgba(255,255,255,0.09)", fontFamily: "var(--font-open-sans),sans-serif" }}
+                className="flex-1 rounded-xl px-3.5 py-2.5 text-white placeholder-white/25 outline-none transition-colors"
+                style={{ background: "rgba(255,255,255,0.06)", border: "1px solid rgba(255,255,255,0.09)", fontFamily: "var(--font-open-sans),sans-serif", fontSize: "16px" }}
                 onFocus={(e) => { e.currentTarget.style.borderColor = "rgba(24,163,221,0.45)"; }}
                 onBlur={(e) => { e.currentTarget.style.borderColor = "rgba(255,255,255,0.09)"; }}
               />

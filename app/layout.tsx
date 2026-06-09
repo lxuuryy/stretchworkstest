@@ -18,6 +18,12 @@ const openSans = Open_Sans({
 export const metadata: Metadata = {
   title: "StretchWorks — Performance Mobility Studio",
   description: "1-on-1 assisted stretching for athletes and active adults. Recover faster, move better, stay in the game.",
+  viewport: {
+    width: "device-width",
+    initialScale: 1,
+    maximumScale: 1,
+    userScalable: false,
+  },
 };
 
 export default function RootLayout({
