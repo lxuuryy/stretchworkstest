@@ -4,7 +4,7 @@ import { createAnthropic } from "@ai-sdk/anthropic";
 import { streamText, tool, UIMessage, convertToModelMessages, stepCountIs } from "ai";
 
 const anthropic = createAnthropic({
-  apiKey: process.env.ANTHROPIC_API_KEY ?? "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",
+  apiKey: process.env.ANTHROPIC_API_KEY,
 });
 import { z } from "zod";
 
