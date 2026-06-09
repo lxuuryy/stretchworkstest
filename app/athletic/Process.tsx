@@ -169,8 +169,8 @@ export default function Process() {
         />
       </div>
 
-      {/* 300vh scroll budget */}
-      <div ref={outerRef} style={{ height: "300vh" }}>
+      {/* 220vh scroll budget */}
+      <div ref={outerRef} style={{ height: "220vh" }}>
 
         {/*
           ONE sticky container = 100vh, split into:

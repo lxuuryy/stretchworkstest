@@ -99,7 +99,7 @@ export default function Process() {
         <div className="absolute bottom-0 -left-20 w-[500px] h-[500px] rounded-full" style={{ background: "radial-gradient(circle, rgba(24,163,221,0.07) 0%, transparent 65%)", filter: "blur(80px)" }} />
       </div>
 
-      <div ref={outerRef} style={{ height: "300vh" }}>
+      <div ref={outerRef} style={{ height: "220vh" }}>
         <div className="sticky top-0 flex flex-col" style={{ height: "100vh", overflow: "hidden" }}>
 
           <div className="shrink-0 px-6 pt-10 pb-6 border-b" style={{ background: "#001433", borderColor: "rgba(24,163,221,0.15)", zIndex: 20 }}>

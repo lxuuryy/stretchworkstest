@@ -126,8 +126,8 @@ export default function Process() {
         <div className="absolute bottom-0 -left-20 w-[500px] h-[500px] rounded-full" style={{ background: "radial-gradient(circle, rgba(24,163,221,0.07) 0%, transparent 65%)", filter: "blur(80px)" }} />
       </div>
 
-      {/* 300vh scroll budget — tighter, cards stack sooner */}
-      <div ref={outerRef} style={{ height: "300vh" }}>
+      {/* 220vh scroll budget — tighter, cards stack sooner */}
+      <div ref={outerRef} style={{ height: "220vh" }}>
 
         {/* ONE sticky container — heading on top, cards below */}
         <div

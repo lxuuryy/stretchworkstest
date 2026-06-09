@@ -2,35 +2,13 @@ import Image from "next/image";
 import PainPoints from "./PainPoints";
 import Process from "./Process";
 import HeroStats from "./HeroStats";
+import Navbar from "../components/Navbar";
 
 export default function AgingPage() {
   return (
     <div className="min-h-screen bg-white text-[#1a1a2e] antialiased" style={{ fontFamily: "var(--font-open-sans), sans-serif" }}>
 
-      {/* NAV */}
-      <nav className="fixed top-0 w-full z-50 bg-black/40 backdrop-blur-xl border-b border-white/10">
-        <div className="max-w-7xl mx-auto px-6 flex items-center justify-between h-16">
-          <a href="/">
-            <Image src="/homeImage.png" alt="StretchWorks" width={160} height={48} className="h-10 w-auto object-contain brightness-0 invert" priority />
-          </a>
-          <div className="hidden md:flex gap-8 text-sm font-semibold text-white/70">
-            <a href="/athletic" className="hover:text-white transition-colors duration-200">Athletic</a>
-            <a href="/recovery-and-injury-support" className="hover:text-white transition-colors duration-200">Recovery & Injury</a>
-            <a href="/50-60-stiffness-and-healthy-ageing" className="text-white">50s & 60s</a>
-          </div>
-          <a
-            href="#book"
-            className="relative flex items-center gap-2 text-white text-sm font-bold px-6 py-3 rounded-full transition-all duration-300 hover:scale-105 overflow-hidden group"
-            style={{ background: "linear-gradient(135deg, #18a3dd 0%, #0e7aaa 100%)", boxShadow: "0 0 20px rgba(24,163,221,0.4), inset 0 1px 0 rgba(255,255,255,0.15)", fontFamily: "var(--font-raleway), sans-serif" }}
-          >
-            <span className="relative flex items-center gap-2">
-              <span className="w-1.5 h-1.5 rounded-full bg-white/80 animate-pulse" />
-              Book Free Session
-              <span className="group-hover:translate-x-0.5 transition-transform duration-200">→</span>
-            </span>
-          </a>
-        </div>
-      </nav>
+      <Navbar current="/50-60-stiffness-and-healthy-ageing" />
 
       {/* HERO */}
       <section className="relative min-h-screen flex flex-col justify-between overflow-hidden pt-16">
