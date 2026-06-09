@@ -1,5 +1,5 @@
 import { createAnthropic } from "@ai-sdk/anthropic";
-import { streamText, tool, UIMessage, convertToModelMessages } from "ai";
+import { streamText, tool, UIMessage, convertToModelMessages, stepCountIs } from "ai";
 
 const anthropic = createAnthropic({
   apiKey: "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",
@@ -67,7 +67,7 @@ Guidelines:
 - If someone asks about pricing or availability specifics, let them know a team member will confirm those details.`,
     messages: modelMessages,
     tools: { setup_consultation: consultationTool },
-    maxSteps: 5,
+    stopWhen: stepCountIs(5),
   });
 
   return result.toUIMessageStreamResponse();
