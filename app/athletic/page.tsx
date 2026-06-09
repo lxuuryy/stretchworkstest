@@ -74,17 +74,16 @@ export default function AthleticPage() {
           style={{ zIndex: 1, background: "linear-gradient(to top, rgba(0,0,0,0.6) 0%, transparent 100%)" }}
         />
 
-        {/* Main content — left aligned */}
+        {/* Main content */}
         <div className="relative flex-1 flex items-center" style={{ zIndex: 2 }}>
-          <div className="max-w-7xl mx-auto px-8 md:px-16 w-full py-12">
+          <div className="max-w-7xl mx-auto px-6 md:px-16 w-full py-10 md:py-12">
 
             {/* Headline */}
             <h1
               className="font-black uppercase leading-none tracking-tight"
-              style={{ fontFamily: "var(--font-raleway), sans-serif", fontSize: "clamp(3rem, 8vw, 7rem)" }}
+              style={{ fontFamily: "var(--font-raleway), sans-serif", fontSize: "clamp(2.4rem, 9vw, 7rem)" }}
             >
               <span className="block text-white">Train Hard.</span>
-              {/* outlined / ghost text line */}
               <span
                 className="block"
                 style={{
@@ -98,23 +97,23 @@ export default function AthleticPage() {
               <span className="block text-white">Stay In The Game.</span>
             </h1>
 
-            {/* Subtext */}
-            <p className="mt-8 text-white/60 leading-relaxed max-w-lg" style={{ fontSize: "clamp(1rem, 1.5vw, 1.2rem)" }}>
+            {/* Subtext — hidden on small mobile to save space */}
+            <p className="hidden sm:block mt-6 text-white/60 leading-relaxed max-w-lg" style={{ fontSize: "clamp(1rem, 1.5vw, 1.2rem)" }}>
               Whether you're chasing a PB, managing niggles, or just want to move better. StretchWorks gives active people a smarter way to recover.
             </p>
 
             {/* CTAs */}
-            <div className="mt-10 flex flex-wrap items-center gap-4">
+            <div className="mt-6 md:mt-10 flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
               <a
                 href="#book"
-                className="inline-flex items-center gap-3 text-white font-bold px-8 py-4 rounded-full transition-all duration-200 hover:opacity-90"
-                style={{ backgroundColor: "#18a3dd", boxShadow: "0 8px 32px rgba(24,163,221,0.4)", fontFamily: "var(--font-raleway), sans-serif", fontSize: "1rem" }}
+                className="inline-flex items-center justify-center gap-3 text-white font-bold px-6 py-4 rounded-full transition-all duration-200 hover:opacity-90 text-sm md:text-base"
+                style={{ backgroundColor: "#18a3dd", boxShadow: "0 8px 32px rgba(24,163,221,0.4)", fontFamily: "var(--font-raleway), sans-serif" }}
               >
                 Book Free Assessment →
               </a>
               <a
                 href="tel:+61493720274"
-                className="inline-flex items-center gap-2 border border-white/20 text-white/80 hover:text-white hover:border-white/40 font-semibold px-6 py-4 rounded-full transition-all duration-200 text-sm backdrop-blur-sm"
+                className="inline-flex items-center justify-center gap-2 border border-white/20 text-white/80 hover:text-white hover:border-white/40 font-semibold px-6 py-4 rounded-full transition-all duration-200 text-sm backdrop-blur-sm"
                 style={{ fontFamily: "var(--font-raleway), sans-serif" }}
               >
                 <span className="text-[#18a3dd]">↗</span> Call Now

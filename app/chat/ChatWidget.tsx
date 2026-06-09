@@ -293,10 +293,10 @@ export default function ChatWidget() {
         )}
       </AnimatePresence>
 
-      {/* TOGGLE BUTTON */}
+      {/* TOGGLE BUTTON — hidden on mobile when panel is open (panel is full-screen, back arrow closes it) */}
       <motion.button
         onClick={() => setOpen((v) => !v)}
-        className="fixed bottom-5 right-5 z-[100] w-14 h-14 rounded-2xl flex items-center justify-center shadow-lg"
+        className={`fixed bottom-5 right-5 z-[100] w-14 h-14 rounded-2xl items-center justify-center shadow-lg ${open ? "hidden sm:flex" : "flex"}`}
         style={{ background: open ? "rgba(255,255,255,0.1)" : "linear-gradient(135deg,#18a3dd,#0e7aaa)", boxShadow: open ? "none" : "0 8px 30px rgba(24,163,221,0.45)", border: open ? "1px solid rgba(255,255,255,0.12)" : "none" }}
         whileHover={{ scale: 1.06 }}
         whileTap={{ scale: 0.95 }}
