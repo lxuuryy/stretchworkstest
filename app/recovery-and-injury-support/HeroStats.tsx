@@ -23,11 +23,11 @@ export default function HeroStats() {
     <motion.div className="relative w-full" style={{ zIndex: 2 }} variants={container} initial="hidden" animate="show">
       <div className="grid grid-cols-3 divide-x divide-white/10 border-t border-white/10 backdrop-blur-md bg-black/30">
         {stats.map((s) => (
-          <motion.div key={s.label} variants={item} className="px-8 py-6 flex items-center gap-4">
-            <motion.span className="font-black" style={{ color: "#18a3dd", fontFamily: "var(--font-raleway), sans-serif", fontSize: "clamp(1.2rem, 2.5vw, 1.8rem)" }}>
+          <motion.div key={s.label} variants={item} className="px-3 sm:px-8 py-4 sm:py-6 flex flex-col sm:flex-row items-center sm:items-center gap-1 sm:gap-4 text-center sm:text-left">
+            <motion.span className="font-black" style={{ color: "#18a3dd", fontFamily: "var(--font-raleway), sans-serif", fontSize: "clamp(1.1rem, 4vw, 2rem)" }}>
               {s.value}
             </motion.span>
-            <span className="text-xs text-white/40 font-medium uppercase tracking-wider leading-tight">{s.label}</span>
+            <span className="text-white/40 font-medium uppercase tracking-wider leading-tight" style={{ fontSize: "clamp(0.55rem, 1.5vw, 0.75rem)" }}>{s.label}</span>
           </motion.div>
         ))}
       </div>
