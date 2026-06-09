@@ -1,9 +1,9 @@
 import { createAnthropic } from "@ai-sdk/anthropic";
+import { streamText, tool, UIMessage, convertToModelMessages } from "ai";
 
 const anthropic = createAnthropic({
   apiKey: "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",
 });
-import { streamText, tool, UIMessage, convertToModelMessages } from "ai";
 import { z } from "zod";
 
 const consultationTool = tool({
