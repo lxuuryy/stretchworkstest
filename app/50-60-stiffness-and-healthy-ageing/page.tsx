@@ -103,7 +103,7 @@ export default function AgingPage() {
                 ))}
               </ul>
               <a href="#book" className="mt-10 inline-flex items-center gap-3 text-white font-bold px-8 py-4 rounded-full transition-all duration-200 hover:opacity-90" style={{ backgroundColor: "#18a3dd", boxShadow: "0 8px 24px rgba(24,163,221,0.3)", fontFamily: "var(--font-raleway), sans-serif" }}>
-                Book Free Assessment →
+                Book Assessment →
               </a>
             </div>
           </div>
@@ -183,7 +183,7 @@ export default function AgingPage() {
             <a href="mailto:studio.manager@stretchworks.com.au" className="mt-12 inline-flex items-center gap-3 bg-white font-black text-lg px-12 py-5 rounded-full transition-all duration-200 hover:bg-[#f0f9ff]" style={{ color: "#18a3dd", fontFamily: "var(--font-raleway), sans-serif" }}>
               Book My Assessment →
             </a>
-            <p className="mt-5 text-sm text-white/40">You do not have to keep adapting your life to a tight body. No credit card. No lock-in.</p>
+            <p className="mt-5 text-sm text-white/40">You do not have to keep adapting your life to a tight body.</p>
           </div>
         </div>
       </section>

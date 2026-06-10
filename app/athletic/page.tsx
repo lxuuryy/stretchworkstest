@@ -37,7 +37,7 @@ export default function AthleticPage() {
             {/* Headline */}
             <h1
               className="font-black uppercase leading-none tracking-tight"
-              style={{ fontFamily: "var(--font-raleway), sans-serif", fontSize: "clamp(2.4rem, 9vw, 7rem)" }}
+              style={{ fontFamily: "var(--font-raleway), sans-serif", fontSize: "clamp(3rem, 8vw, 7rem)" }}
             >
               <span className="block text-white">Train Hard.</span>
               <span
@@ -53,8 +53,8 @@ export default function AthleticPage() {
               <span className="block text-white">Stay In The Game.</span>
             </h1>
 
-            {/* Subtext — hidden on small mobile to save space */}
-            <p className="hidden sm:block mt-6 text-white/60 leading-relaxed max-w-lg" style={{ fontSize: "clamp(1rem, 1.5vw, 1.2rem)" }}>
+            {/* Subtext */}
+            <p className="mt-8 text-white/60 leading-relaxed max-w-lg" style={{ fontSize: "clamp(1rem, 1.5vw, 1.2rem)" }}>
               Whether you're chasing a PB, managing niggles, or just want to move better. StretchWorks gives active people a smarter way to recover.
             </p>
 
@@ -65,7 +65,7 @@ export default function AthleticPage() {
                 className="inline-flex items-center justify-center gap-3 text-white font-bold px-6 py-4 rounded-full transition-all duration-200 hover:opacity-90 text-sm md:text-base"
                 style={{ backgroundColor: "#18a3dd", boxShadow: "0 8px 32px rgba(24,163,221,0.4)", fontFamily: "var(--font-raleway), sans-serif" }}
               >
-                Book Free Assessment →
+                Book Assessment →
               </a>
               <a
                 href="tel:+61493720274"
@@ -162,7 +162,7 @@ export default function AthleticPage() {
                 className="mt-10 inline-flex items-center gap-3 text-white font-bold px-8 py-4 rounded-full transition-all duration-200 hover:opacity-90"
                 style={{ backgroundColor: "#18a3dd", boxShadow: "0 8px 24px rgba(24,163,221,0.3)", fontFamily: "var(--font-raleway), sans-serif" }}
               >
-                Book Free Assessment →
+                Book Assessment →
               </a>
             </div>
 
@@ -318,7 +318,7 @@ export default function AthleticPage() {
             >
               Book My Assessment →
             </a>
-            <p className="mt-5 text-sm text-white/40">No credit card. No lock-in. Just your first step toward better recovery.</p>
+            <p className="mt-5 text-sm text-white/40">Just your first step toward better recovery.</p>
           </div>
         </div>
       </section>

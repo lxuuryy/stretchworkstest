@@ -54,7 +54,7 @@ export default function Navbar({ current }: { current?: string }) {
             >
               <span className="relative flex items-center gap-2">
                 <span className="w-1.5 h-1.5 rounded-full bg-white/80 animate-pulse" />
-                <span className="hidden sm:inline">Book Free Session</span>
+                <span className="hidden sm:inline">Book Session</span>
                 <span className="sm:hidden">Book</span>
                 <span className="group-hover:translate-x-0.5 transition-transform duration-200">→</span>
               </span>
