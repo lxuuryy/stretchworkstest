@@ -1,4 +1,4 @@
-import Image from "next/image";
+import { asset } from "../lib/assets";
 import PainPoints from "./PainPoints";
 import HeroStats from "./HeroStats";
 import Process from "./Process";
@@ -15,7 +15,7 @@ export default function AthleticPage() {
 
         {/* Video */}
         <video autoPlay muted loop playsInline className="absolute inset-0 w-full h-full object-cover" style={{ zIndex: 0 }}>
-          <source src="/Youtube.mp4" type="video/mp4" />
+          <source src={asset("/Youtube.mp4")} type="video/mp4" />
         </video>
 
         {/* Left-heavy gradient — dark on left fades to subtle on right so video shows */}
@@ -95,8 +95,8 @@ export default function AthleticPage() {
 
             {/* Left — image */}
             <div className="relative rounded-3xl overflow-hidden shadow-2xl">
-              <Image
-                src="/firstVisit.jpg"
+              <img
+                src={asset("/firstVisit.jpg")}
                 alt="StretchWorks assisted stretching session"
                 width={700}
                 height={600}

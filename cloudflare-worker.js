@@ -17,7 +17,6 @@ export default {
       '/50-60-stiffness-and-healthy-ageing',
       '/forms',
       '/contact',
-      '/test-page',
     ];
 
     const isStretchPage = stretchPages.some(p =>
@@ -58,26 +57,9 @@ export default {
       // Not from a stretch page → fall through to main site
     }
 
-    // ── Public files — only proxy to Vercel if Referer is a stretch page ───
-    const stretchAssets = [
-      '/homeImage.png',
-      '/firstVisit.jpg',
-      '/Youtube.mp4',
-      '/recovery.mp4',
-      '/logo.png',
-    ];
-
-    if (stretchAssets.includes(path)) {
-      const referer = request.headers.get('referer') || '';
-      const isStretchReferer = stretchPages.some(p => referer.includes(p));
-      if (isStretchReferer) {
-        return fetch(VERCEL + path, {
-          method: 'GET',
-          headers: request.headers,
-        });
-      }
-      // Not from a stretch page → fall through to main site
-    }
+    // Note: public media (images/videos) are referenced with absolute Vercel
+    // URLs in the app, so they go straight to Vercel and never reach this worker.
+    // No /public asset proxying is needed here.
 
     // ── Everything else → main chatwithresume.app ──────────────────────────
     const newRequest = new Request(

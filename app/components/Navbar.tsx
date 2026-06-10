@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import Image from "next/image";
+import { asset } from "../lib/assets";
 import { AnimatePresence, motion } from "framer-motion";
 
 const links = [
@@ -19,13 +19,12 @@ export default function Navbar({ current }: { current?: string }) {
         <div className="max-w-7xl mx-auto px-6 flex items-center justify-between h-16">
           {/* Logo */}
           <a href="/">
-            <Image
-              src="/homeImage.png"
+            <img
+              src={asset("/homeImage.png")}
               alt="StretchWorks"
               width={160}
               height={48}
               className="h-10 w-auto object-contain brightness-0 invert"
-              priority
             />
           </a>
 

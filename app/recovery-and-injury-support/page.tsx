@@ -1,4 +1,4 @@
-import Image from "next/image";
+import { asset } from "../lib/assets";
 import PainPoints from "./PainPoints";
 import Process from "./Process";
 import HeroStats from "./HeroStats";
@@ -13,7 +13,7 @@ export default function RecoveryPage() {
       {/* HERO */}
       <section className="relative min-h-screen flex flex-col justify-between overflow-hidden pt-16">
         <video autoPlay muted loop playsInline className="absolute inset-0 w-full h-full object-cover" style={{ zIndex: 0 }}>
-          <source src="/recovery.mp4" type="video/mp4" />
+          <source src={asset("/recovery.mp4")} type="video/mp4" />
         </video>
         <div className="absolute inset-0" style={{ zIndex: 1, background: "linear-gradient(105deg, rgba(0,8,24,0.92) 0%, rgba(0,8,24,0.75) 45%, rgba(0,8,24,0.25) 100%)" }} />
         <div className="absolute bottom-0 left-0 right-0 h-40" style={{ zIndex: 1, background: "linear-gradient(to top, rgba(0,0,0,0.6) 0%, transparent 100%)" }} />
@@ -67,7 +67,7 @@ export default function RecoveryPage() {
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12 md:gap-20 items-center">
             <div className="relative rounded-3xl overflow-hidden shadow-2xl">
-              <Image src="/firstVisit.jpg" alt="StretchWorks recovery session" width={700} height={600} className="w-full h-full object-cover" />
+              <img src={asset("/firstVisit.jpg")} alt="StretchWorks recovery session" width={700} height={600} className="w-full h-full object-cover" />
               <div className="absolute bottom-0 left-0 right-0 h-1/3" style={{ background: "linear-gradient(to top, rgba(0,20,51,0.4), transparent)" }} />
             </div>
             <div>
@@ -212,7 +212,7 @@ export default function RecoveryPage() {
       <footer className="border-t border-gray-100 py-16 px-6 bg-white">
         <div className="max-w-6xl mx-auto grid md:grid-cols-4 gap-10">
           <div className="md:col-span-2">
-            <Image src="/homeImage.png" alt="StretchWorks" width={140} height={40} className="h-8 w-auto object-contain mb-3" />
+            <img src={asset("/homeImage.png")} alt="StretchWorks" width={140} height={40} className="h-8 w-auto object-contain mb-3" />
             <p className="text-gray-400 text-sm leading-relaxed max-w-xs">Personalised assisted stretching for recovery, injury support, and rebuilding ease in your body.</p>
           </div>
           <div>
