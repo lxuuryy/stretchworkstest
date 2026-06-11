@@ -9,10 +9,10 @@ export default function RecoveryPage() {
   return (
     <div className="min-h-screen bg-white text-[#1a1a2e] antialiased" style={{ fontFamily: "var(--font-open-sans), sans-serif" }}>
 
-      <Navbar current="/recovery-and-injury-support" />
+      <Navbar />
 
       {/* HERO */}
-      <section className="relative min-h-screen flex flex-col justify-between overflow-hidden pt-16">
+      <section className="relative min-h-screen flex flex-col justify-between overflow-hidden pt-20">
         <video autoPlay muted loop playsInline className="absolute inset-0 w-full h-full object-cover" style={{ zIndex: 0 }}>
           <source src={asset("/recovery.mp4")} type="video/mp4" />
         </video>
@@ -34,6 +34,17 @@ export default function RecoveryPage() {
             <p className="mt-8 text-white/60 leading-relaxed max-w-lg" style={{ fontSize: "clamp(1rem, 1.5vw, 1.2rem)" }}>
               If your body has changed after injury, surgery, illness, or long periods of inactivity. StretchWorks offers calm, personalised support to help you reconnect with movement at your pace.
             </p>
+            {/* Promo */}
+            <div
+              className="mt-6 inline-flex items-center gap-3 rounded-full px-5 py-2.5 backdrop-blur-sm"
+              style={{ backgroundColor: "rgba(24,163,221,0.15)", border: "1px solid rgba(24,163,221,0.4)" }}
+            >
+              <span className="w-2 h-2 rounded-full bg-[#18a3dd] animate-pulse" />
+              <span className="text-white font-bold text-sm md:text-base tracking-wide" style={{ fontFamily: "var(--font-raleway), sans-serif" }}>
+                <span className="text-[#18a3dd]">30% OFF</span> your first session
+              </span>
+            </div>
+
             <div className="mt-10 flex flex-wrap items-center gap-4">
               <a
                 href="#book"
@@ -42,7 +53,7 @@ export default function RecoveryPage() {
               >
                 Book My Assessment →
               </a>
-              <a href="tel:+61493720274" className="inline-flex items-center gap-2 border border-white/20 text-white/80 hover:text-white hover:border-white/40 font-semibold px-6 py-4 rounded-full transition-all duration-200 text-sm backdrop-blur-sm" style={{ fontFamily: "var(--font-raleway), sans-serif" }}>
+              <a href="tel:+61468021079" className="inline-flex items-center gap-2 border border-white/20 text-white/80 hover:text-white hover:border-white/40 font-semibold px-6 py-4 rounded-full transition-all duration-200 text-sm backdrop-blur-sm" style={{ fontFamily: "var(--font-raleway), sans-serif" }}>
                 <span className="text-[#18a3dd]">↗</span> Call Now
               </a>
             </div>
@@ -221,9 +232,9 @@ export default function RecoveryPage() {
             </ul>
           </div>
           <div>
-            <h4 className="text-[#1a1a2e] font-bold mb-4 text-xs uppercase tracking-widest" style={{ fontFamily: "var(--font-raleway), sans-serif" }}>Contact</h4>
+            <h4 className="text-[#1a1a2e] font-bold mb-4 text-xs uppercase tracking-widest" style={{ fontFamily: "var(--font-raleway), sans-serif" }}><a href="/contact" className="hover:text-[#18a3dd] transition-colors">Contact</a></h4>
             <ul className="text-sm space-y-1.5 text-gray-400">
-              <li>0493 720 274</li>
+              <li>0468 021 079</li>
               <li className="break-all">studio.manager@stretchworks.com.au</li>
               <li>303B Beach Road, Black Rock VIC 3193</li>
             </ul>
@@ -232,8 +243,8 @@ export default function RecoveryPage() {
         <div className="max-w-6xl mx-auto border-t border-gray-100 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-300">
           <span>© 2026 StretchWorks. All rights reserved.</span>
           <div className="flex gap-6">
-            <a href="#" className="hover:text-[#18a3dd] transition-colors">Terms</a>
-            <a href="#" className="hover:text-[#18a3dd] transition-colors">Privacy</a>
+            <a href="https://www.stretchworks.com.au/terms-of-service/" className="hover:text-[#18a3dd] transition-colors">Terms</a>
+            <a href="https://www.stretchworks.com.au/privacy-policy-2/" className="hover:text-[#18a3dd] transition-colors">Privacy</a>
           </div>
         </div>
       </footer>

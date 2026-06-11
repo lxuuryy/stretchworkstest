@@ -3,9 +3,9 @@
 import { motion } from "framer-motion";
 
 const stats = [
-  { value: "1-on-1", label: "Personalised Sessions" },
-  { value: "60 min", label: "First Visit Assessment" },
-  { value: "Day 1", label: "Feel the Difference" },
+  { value: "60 min", label: "First Visit" },
+  { value: "1-on-1", label: "Personalised" },
+  { value: "Next Day", label: "Move Better" },
 ];
 
 const container = {

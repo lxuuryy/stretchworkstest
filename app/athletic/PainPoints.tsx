@@ -12,24 +12,24 @@ const cards = [
   },
   {
     n: "02",
+    icon: "⛳",
+    sport: "Rotational Sports",
+    quote: "I've lost range through my back, hips, and shoulders.",
+    detail: "If your swing, rotation, or follow-through feels restricted, it usually shows up before you lose performance. We target the areas that help you rotate more freely and move with less strain.",
+  },
+  {
+    n: "03",
     icon: "🏊",
     sport: "Shoulder-Dominant Sports",
     quote: "My shoulders are working, but they don't feel right.",
     detail: "When your shoulders and upper back are tight, everything starts compensating. One-to-one assisted stretching helps create better movement through the joints and muscle groups that carry the load.",
   },
   {
-    n: "03",
+    n: "04",
     icon: "🏋️",
     sport: "Strength and Field Sports",
     quote: "It's never a major injury. Just constant niggles.",
     detail: "Tight hips, angry hamstrings, stubborn adductors, and stiff backs have a way of hanging around. Regular stretching helps you stay ahead of the small issues before they start costing you sessions.",
-  },
-  {
-    n: "04",
-    icon: "⛳",
-    sport: "Rotational Sports",
-    quote: "I've lost range through my back, hips, and shoulders.",
-    detail: "If your swing, rotation, or follow-through feels restricted, it usually shows up before you lose performance. We target the areas that help you rotate more freely and move with less strain.",
   },
 ];
 
