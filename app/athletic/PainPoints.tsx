@@ -57,7 +57,7 @@ export default function PainPoints() {
 
   return (
     /* NO overflow-hidden — it breaks position:sticky */
-    <section className="relative py-32 px-6 bg-[#f8fbfe]">
+    <section className="relative py-16 md:py-24 px-6 bg-[#f8fbfe]">
 
       {/* Gradient blobs — clipped with a wrapper div, not on section */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden>

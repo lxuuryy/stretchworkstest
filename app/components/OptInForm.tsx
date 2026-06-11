@@ -14,7 +14,7 @@ type OptInFormProps = {
 // script auto-resizes the iframe to fit its content via postMessage. We give
 // the iframe an explicit (not percentage) starting height so layout is stable
 // before that runs. next/script dedupes by src, so it only loads once.
-export default function OptInForm({ formId, formName, height = 700 }: OptInFormProps) {
+export default function OptInForm({ formId, formName, height = 600 }: OptInFormProps) {
   return (
     <div>
       <iframe

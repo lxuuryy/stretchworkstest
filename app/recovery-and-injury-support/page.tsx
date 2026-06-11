@@ -62,7 +62,7 @@ export default function RecoveryPage() {
       <Process />
 
       {/* WORKS ALONGSIDE */}
-      <section className="py-24 px-6 bg-white">
+      <section className="py-16 md:py-24 px-6 bg-white">
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12 md:gap-20 items-center">
             <div className="relative rounded-3xl overflow-hidden shadow-2xl">
@@ -117,7 +117,7 @@ export default function RecoveryPage() {
       </section>
 
       {/* TESTIMONIALS */}
-      <section id="reviews" className="relative py-32 px-6 overflow-hidden" style={{ background: "linear-gradient(160deg, #001433 0%, #002a5c 60%, #001433 100%)" }}>
+      <section id="reviews" className="relative py-16 md:py-16 md:py-24 px-6 overflow-hidden" style={{ background: "linear-gradient(160deg, #001433 0%, #002a5c 60%, #001433 100%)" }}>
         <div className="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden>
           <div className="absolute top-0 right-0 w-[500px] h-[500px] rounded-full" style={{ background: "radial-gradient(circle, rgba(24,163,221,0.1) 0%, transparent 65%)", filter: "blur(80px)" }} />
           <div className="absolute bottom-0 left-0 w-[400px] h-[400px] rounded-full" style={{ background: "radial-gradient(circle, rgba(24,163,221,0.07) 0%, transparent 65%)", filter: "blur(80px)" }} />
@@ -177,7 +177,7 @@ export default function RecoveryPage() {
       </section>
 
       {/* BOOK CTA */}
-      <section className="py-32 px-6 bg-[#f8fbfe]">
+      <section className="py-16 md:py-16 md:py-24 px-6 bg-[#f8fbfe]">
         <div className="max-w-4xl mx-auto">
           <div className="rounded-3xl p-5 sm:p-10 md:p-16 text-center text-white" style={{ background: "linear-gradient(145deg, #002256 0%, #18a3dd 100%)", boxShadow: "0 24px 60px rgba(24,163,221,0.2)" }}>
             <span className="text-xs font-bold tracking-widest uppercase text-[#a9eee6]">First Visit</span>

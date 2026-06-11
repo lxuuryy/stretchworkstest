@@ -133,15 +133,6 @@ export default function AthleticPage() {
                   </a>
                 </div>
 
-                {/* Trust line */}
-                <div className="mt-5 flex flex-wrap items-center gap-x-5 gap-y-2 text-white/50 text-xs sm:text-sm">
-                  {["Your assisted stretching studio", "1-on-1 stretch coaches", "Performance-led mobility"].map((t, i) => (
-                    <span key={t} className="flex items-center gap-2">
-                      {i > 0 && <span className="text-[#18a3dd]">•</span>}
-                      {t}
-                    </span>
-                  ))}
-                </div>
               </div>
 
               {/* Right — VSL video + floating badge */}
@@ -170,7 +161,7 @@ export default function AthleticPage() {
       <Process />
 
       {/* ── IN ACTION (VSL #2) + BENEFIT CHIPS ─────────────────────────── */}
-      <section className="py-24 px-6 bg-[#f8fbfe]">
+      <section className="py-16 md:py-24 px-6 bg-[#f8fbfe]">
         <div className="max-w-6xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             <div>
@@ -208,7 +199,7 @@ export default function AthleticPage() {
       </section>
 
       {/* ── WHO IT'S FOR ───────────────────────────────────────────────── */}
-      <section className="py-24 px-6 bg-white">
+      <section className="py-16 md:py-24 px-6 bg-white">
         <div className="max-w-6xl mx-auto">
           <div className="max-w-3xl">
             <span className="text-xs font-bold tracking-[0.2em] uppercase text-[#18a3dd]" style={{ fontFamily: "var(--font-raleway), sans-serif" }}>
@@ -310,7 +301,7 @@ export default function AthleticPage() {
       </section>
 
       {/* ── TESTIMONIALS ───────────────────────────────────────────────── */}
-      <section id="reviews" className="relative py-32 px-6 overflow-hidden" style={{ background: "linear-gradient(160deg, #001433 0%, #002a5c 60%, #001433 100%)" }}>
+      <section id="reviews" className="relative py-16 md:py-16 md:py-24 px-6 overflow-hidden" style={{ background: "linear-gradient(160deg, #001433 0%, #002a5c 60%, #001433 100%)" }}>
         <div className="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden>
           <div className="absolute top-0 right-0 w-[500px] h-[500px] rounded-full" style={{ background: "radial-gradient(circle, rgba(24,163,221,0.1) 0%, transparent 65%)", filter: "blur(80px)" }} />
           <div className="absolute bottom-0 left-0 w-[400px] h-[400px] rounded-full" style={{ background: "radial-gradient(circle, rgba(24,163,221,0.07) 0%, transparent 65%)", filter: "blur(80px)" }} />
@@ -353,7 +344,7 @@ export default function AthleticPage() {
       </section>
 
       {/* ── LEAD FORM ──────────────────────────────────────────────────── */}
-      <section className="py-32 px-6 bg-[#f8fbfe]">
+      <section className="py-16 md:py-16 md:py-24 px-6 bg-[#f8fbfe]">
         <div className="max-w-5xl mx-auto">
           <div className="text-center max-w-2xl mx-auto">
             <span className="text-xs font-bold tracking-widest uppercase text-[#18a3dd]">Claim Your Spot</span>
@@ -390,7 +381,7 @@ export default function AthleticPage() {
       </section>
 
       {/* ── FINAL CTA ──────────────────────────────────────────────────── */}
-      <section className="py-24 px-6 bg-white">
+      <section className="py-16 md:py-24 px-6 bg-white">
         <div className="max-w-4xl mx-auto">
           <div
             className="rounded-3xl p-10 md:p-16 text-center text-white"

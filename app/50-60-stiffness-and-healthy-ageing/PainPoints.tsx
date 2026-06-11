@@ -56,7 +56,7 @@ export default function PainPoints() {
   }, []);
 
   return (
-    <section className="relative py-32 px-6 bg-[#f8fbfe]">
+    <section className="relative py-16 md:py-24 px-6 bg-[#f8fbfe]">
       <div className="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden>
         <div className="absolute -top-40 -left-40 w-[700px] h-[700px] rounded-full" style={{ background: "radial-gradient(circle, rgba(24,163,221,0.1) 0%, transparent 65%)", filter: "blur(70px)" }} />
         <div className="absolute top-1/2 -right-60 w-[600px] h-[600px] rounded-full" style={{ background: "radial-gradient(circle, rgba(0,34,86,0.07) 0%, transparent 65%)", filter: "blur(90px)" }} />
