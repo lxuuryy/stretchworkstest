@@ -41,17 +41,17 @@ const whoCards = [
 
 const testimonials = [
   {
-    quote: "Walked out feeling way looser and moving better straight away. Super friendly staff and the stretches were tailored to what I actually needed.",
-    attribution: "[Verified Google Review to insert]",
+    quote: "A really unique experience that couples my workouts with therapeutic stretching. All staff are great in a relaxing environment — professional, patient, and caring.",
+    attribution: "Gary Agg · Google Review",
   },
   {
-    quote: "Part of my weekly routine now. I move better and I do not get the same back tightness after training.",
-    attribution: "[Verified athlete or active adult review to insert]",
+    quote: "Stretch Works helps me with recovery. I train regularly and rarely suffer sore muscles now. Highly recommend to anyone who takes their training seriously.",
+    attribution: "Debra Hanson · Google Review",
     featured: true,
   },
   {
-    quote: "One session did more for me than my regular massage. I wish I had found this sooner.",
-    attribution: "[Verified Google Review to insert]",
+    quote: "After a 24km kayak — 6 hours 40 minutes in the saddle — getting an assisted stretch from StretchWorks was exactly what I needed.",
+    attribution: "Sharon Young · Google Review",
   },
 ];
 
@@ -86,7 +86,7 @@ export default function AthleticPage() {
 
         {/* Content */}
         <div className="relative flex-1 flex items-center" style={{ zIndex: 2 }}>
-          <div className="max-w-7xl mx-auto px-6 md:px-16 w-full py-6">
+          <div className="max-w-7xl mx-auto px-6 md:px-16 w-full pt-6 pb-16 md:pb-12">
             <div className="grid lg:grid-cols-2 gap-10 lg:gap-14 items-center">
 
               {/* Left — copy */}
