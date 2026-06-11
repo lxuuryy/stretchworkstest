@@ -185,7 +185,7 @@ export default function AthleticPage() {
                 <span style={{ color: "transparent", WebkitTextStroke: "2px #18a3dd" }}>Looks Like</span>
               </h2>
               <p className="mt-5 text-gray-500 leading-relaxed text-lg">
-                It starts with a HumanTrak mobility assessment, then a targeted assisted stretch guided by your coach. No group class, no generic routine — just a proper one-to-one session built around how your body is moving right now.
+                It starts with a HumanTrak mobility assessment, then a targeted assisted stretch guided by your coach. No group class, no generic routine. Just a proper one-to-one session built around how your body is moving right now.
               </p>
 
               <div className="mt-8 flex flex-wrap gap-2.5">
