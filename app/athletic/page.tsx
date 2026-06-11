@@ -3,6 +3,7 @@ import PainPoints from "./PainPoints";
 import HeroStats from "./HeroStats";
 import Process from "./Process";
 import Navbar from "../components/Navbar";
+import OptInForm from "../components/OptInForm";
 
 export default function AthleticPage() {
   return (
@@ -289,7 +290,7 @@ export default function AthleticPage() {
       <section id="book" className="py-32 px-6 bg-[#f8fbfe]">
         <div className="max-w-4xl mx-auto">
           <div
-            className="rounded-3xl p-12 md:p-16 text-center text-white"
+            className="rounded-3xl p-5 sm:p-10 md:p-16 text-center text-white"
             style={{ background: "linear-gradient(145deg, #002256 0%, #18a3dd 100%)", boxShadow: "0 24px 60px rgba(24,163,221,0.2)" }}
           >
             <span className="text-xs font-bold tracking-widest uppercase text-[#a9eee6]">First Visit</span>
@@ -311,13 +312,9 @@ export default function AthleticPage() {
                 </div>
               ))}
             </div>
-            <a
-              href="mailto:studio.manager@stretchworks.com.au"
-              className="mt-12 inline-flex items-center gap-3 bg-white font-black text-lg px-12 py-5 rounded-full transition-all duration-200 hover:bg-[#f0f9ff]"
-              style={{ color: "#18a3dd", fontFamily: "var(--font-raleway), sans-serif" }}
-            >
-              Book My Assessment →
-            </a>
+            <div className="mt-12 bg-white rounded-2xl p-3 sm:p-5 text-left">
+              <OptInForm formId="1s5RE0ZUNOV0yCbUIhAS" formName="Athletes_LP Opt In Form" />
+            </div>
             <p className="mt-5 text-sm text-white/40">Just your first step toward better recovery.</p>
           </div>
         </div>

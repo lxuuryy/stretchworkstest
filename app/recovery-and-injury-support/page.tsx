@@ -3,6 +3,7 @@ import PainPoints from "./PainPoints";
 import Process from "./Process";
 import HeroStats from "./HeroStats";
 import Navbar from "../components/Navbar";
+import OptInForm from "../components/OptInForm";
 
 export default function RecoveryPage() {
   return (
@@ -175,7 +176,7 @@ export default function RecoveryPage() {
       {/* BOOK CTA */}
       <section id="book" className="py-32 px-6 bg-[#f8fbfe]">
         <div className="max-w-4xl mx-auto">
-          <div className="rounded-3xl p-12 md:p-16 text-center text-white" style={{ background: "linear-gradient(145deg, #002256 0%, #18a3dd 100%)", boxShadow: "0 24px 60px rgba(24,163,221,0.2)" }}>
+          <div className="rounded-3xl p-5 sm:p-10 md:p-16 text-center text-white" style={{ background: "linear-gradient(145deg, #002256 0%, #18a3dd 100%)", boxShadow: "0 24px 60px rgba(24,163,221,0.2)" }}>
             <span className="text-xs font-bold tracking-widest uppercase text-[#a9eee6]">First Visit</span>
             <h2 className="mt-4 text-4xl md:text-5xl font-black uppercase tracking-tight leading-tight" style={{ fontFamily: "var(--font-raleway), sans-serif" }}>
               Book Your<br />Mobility Assessment
@@ -195,9 +196,9 @@ export default function RecoveryPage() {
                 </div>
               ))}
             </div>
-            <a href="mailto:studio.manager@stretchworks.com.au" className="mt-12 inline-flex items-center gap-3 bg-white font-black text-lg px-12 py-5 rounded-full transition-all duration-200 hover:bg-[#f0f9ff]" style={{ color: "#18a3dd", fontFamily: "var(--font-raleway), sans-serif" }}>
-              Book My Assessment →
-            </a>
+            <div className="mt-12 bg-white rounded-2xl p-3 sm:p-5 text-left">
+              <OptInForm formId="9cYJgtRmQ5Fd2eqhGKRf" formName="Recovery_LP Opt In Form" />
+            </div>
             <p className="mt-5 text-sm text-white/40">Movement does not have to feel this hard.</p>
           </div>
         </div>
