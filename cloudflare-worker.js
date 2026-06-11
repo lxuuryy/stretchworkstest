@@ -3,11 +3,6 @@ export default {
     const url = new URL(request.url);
     const path = url.pathname;
 
-    // Prevent infinite loop
-    if (request.headers.get('x-proxied') === 'true') {
-      return fetch(request);
-    }
-
     const VERCEL = 'https://stretchworkstest.vercel.app';
 
     // ── Stretch page routes ────────────────────────────────────────────────
@@ -15,8 +10,6 @@ export default {
       '/athletic',
       '/recovery-and-injury-support',
       '/50-60-stiffness-and-healthy-ageing',
-      '/forms',
-      '/contact',
     ];
 
     const isStretchPage = stretchPages.some(p =>
@@ -61,17 +54,10 @@ export default {
     // URLs in the app, so they go straight to Vercel and never reach this worker.
     // No /public asset proxying is needed here.
 
-    // ── Everything else → main chatwithresume.app ──────────────────────────
-    const newRequest = new Request(
-      'https://chatwithresume.app' + path + url.search,
-      {
-        method: request.method,
-        headers: { ...Object.fromEntries(request.headers), 'x-proxied': 'true' },
-        body: request.method !== 'GET' && request.method !== 'HEAD'
-          ? request.body
-          : undefined,
-      }
-    );
-    return fetch(newRequest);
+    // ── Everything else → existing WordPress site ─────────────────────────
+    // The stretchworks.com.au DNS A record points at the WordPress/cPanel
+    // origin, so a plain pass-through fetch hits WordPress without entering
+    // the Worker again. No loop guard needed.
+    return fetch(request);
   },
 };

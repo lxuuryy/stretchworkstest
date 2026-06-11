@@ -1,3 +1,8 @@
 name = "stretchworks-router"
 main = "cloudflare-worker.js"
 compatibility_date = "2024-09-23"
+
+routes = [
+  { pattern = "stretchworks.com.au/*", zone_name = "stretchworks.com.au" },
+  { pattern = "www.stretchworks.com.au/*", zone_name = "stretchworks.com.au" },
+]
