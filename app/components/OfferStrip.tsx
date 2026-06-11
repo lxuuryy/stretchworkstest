@@ -12,7 +12,7 @@ export default function OfferStrip({ ctaHref = "#book" }: OfferStripProps) {
       style={{ background: "linear-gradient(90deg, #002256 0%, #18a3dd 100%)" }}
     >
       <p className="flex items-center gap-2 truncate text-[11px] sm:text-sm" style={{ fontFamily: "var(--font-raleway), sans-serif" }}>
-        <span className="font-bold uppercase tracking-wide">Limited Offer:</span>
+        <span className="font-bold uppercase tracking-wide">Limited Time Offer:</span>
         {/* Full copy on larger screens */}
         <span className="hidden sm:inline">
           Get <span className="font-bold">30% OFF</span> your first session when you book this week.

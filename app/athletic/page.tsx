@@ -1,5 +1,5 @@
 import PainPoints from "./PainPoints";
-import HeroStats from "./HeroStats";
+import HeroStats from "../components/HeroStats";
 import Process from "./Process";
 import { asset } from "../lib/assets";
 import Navbar from "../components/Navbar";
@@ -69,7 +69,7 @@ export default function AthleticPage() {
       <Navbar cta={{ label: "Get in Touch", href: "#book" }} topClass="top-9 sm:top-10" />
 
       {/* ── HERO ───────────────────────────────────────────────────────── */}
-      <section className="relative min-h-screen flex flex-col justify-between overflow-hidden pt-32">
+      <section className="relative min-h-dvh flex flex-col justify-between overflow-hidden pt-32">
 
         {/* Ambient background video */}
         <video autoPlay muted loop playsInline className="absolute inset-0 w-full h-full object-cover" style={{ zIndex: 0 }}>
@@ -86,7 +86,7 @@ export default function AthleticPage() {
 
         {/* Content */}
         <div className="relative flex-1 flex items-center" style={{ zIndex: 2 }}>
-          <div className="max-w-7xl mx-auto px-6 md:px-16 w-full py-8 md:py-12">
+          <div className="max-w-7xl mx-auto px-6 md:px-16 w-full py-6">
             <div className="grid lg:grid-cols-2 gap-10 lg:gap-14 items-center">
 
               {/* Left — copy */}
@@ -99,8 +99,8 @@ export default function AthleticPage() {
                 </span>
 
                 <h1
-                  className="mt-5 font-black uppercase leading-none tracking-tight"
-                  style={{ fontFamily: "var(--font-raleway), sans-serif", fontSize: "clamp(2.6rem, 6vw, 5.5rem)" }}
+                  className="mt-4 font-black uppercase leading-none tracking-tight"
+                  style={{ fontFamily: "var(--font-raleway), sans-serif", fontSize: "clamp(1.9rem, 3.4vw, 3.25rem)" }}
                 >
                   <span className="block text-white">Train Hard.</span>
                   <span
@@ -112,22 +112,11 @@ export default function AthleticPage() {
                   <span className="block text-white">Stay In The Game.</span>
                 </h1>
 
-                <p className="mt-6 text-white/65 leading-relaxed max-w-xl" style={{ fontSize: "clamp(1rem, 1.4vw, 1.15rem)" }}>
-                  Whether you&rsquo;re chasing a PB, trying to stay loose between rounds, or sick of little niggles turning into bigger setbacks, StretchWorks gives active people a smarter way to recover, move better, and keep performing.
+                <p className="mt-4 text-white/65 leading-relaxed max-w-xl" style={{ fontSize: "clamp(0.95rem, 1.2vw, 1.05rem)" }}>
+                  Whether you&rsquo;re chasing a PB, trying to stay loose between rounds, or sick of little niggles turning into bigger setbacks, StretchWorks gives active people a smarter way to recover, move better, and keep performing. <span className="text-[#18a3dd] font-bold">New clients get 30% off their first session.</span>
                 </p>
 
-                {/* Promo */}
-                <div
-                  className="mt-6 inline-flex items-center gap-3 rounded-full px-5 py-2.5 backdrop-blur-sm"
-                  style={{ backgroundColor: "rgba(24,163,221,0.15)", border: "1px solid rgba(24,163,221,0.4)" }}
-                >
-                  <span className="w-2 h-2 rounded-full bg-[#18a3dd] animate-pulse" />
-                  <span className="text-white font-bold text-sm md:text-base tracking-wide" style={{ fontFamily: "var(--font-raleway), sans-serif" }}>
-                    <span className="text-[#18a3dd]">30% OFF</span> your first session
-                  </span>
-                </div>
-
-                <div className="mt-8 flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
+                <div className="mt-5 flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
                   <a
                     href="#book"
                     className="inline-flex items-center justify-center gap-3 text-white font-bold px-7 py-4 rounded-full transition-all duration-200 hover:opacity-90"
@@ -145,7 +134,7 @@ export default function AthleticPage() {
                 </div>
 
                 {/* Trust line */}
-                <div className="mt-7 flex flex-wrap items-center gap-x-5 gap-y-2 text-white/50 text-xs sm:text-sm">
+                <div className="mt-5 flex flex-wrap items-center gap-x-5 gap-y-2 text-white/50 text-xs sm:text-sm">
                   {["Your assisted stretching studio", "1-on-1 stretch coaches", "Performance-led mobility"].map((t, i) => (
                     <span key={t} className="flex items-center gap-2">
                       {i > 0 && <span className="text-[#18a3dd]">•</span>}
@@ -364,7 +353,7 @@ export default function AthleticPage() {
       </section>
 
       {/* ── LEAD FORM ──────────────────────────────────────────────────── */}
-      <section id="book" className="py-32 px-6 bg-[#f8fbfe]">
+      <section className="py-32 px-6 bg-[#f8fbfe]">
         <div className="max-w-5xl mx-auto">
           <div className="text-center max-w-2xl mx-auto">
             <span className="text-xs font-bold tracking-widest uppercase text-[#18a3dd]">Claim Your Spot</span>
@@ -372,7 +361,7 @@ export default function AthleticPage() {
               Book Your Mobility Assessment
             </h2>
             <p className="mt-6 text-gray-500 text-lg leading-relaxed">
-              A one-hour first visit where we assess how your body is moving, guide you through a targeted assisted stretch, and show you what is most likely holding you back.
+              A 50-minute first visit where we assess how your body is moving, guide you through a targeted assisted stretch, and show you what is most likely holding you back.
             </p>
           </div>
 
@@ -388,10 +377,10 @@ export default function AthleticPage() {
             </div>
 
             {/* Embedded form */}
-            <div className="lg:col-span-3 bg-white rounded-2xl border border-gray-100 p-3 sm:p-5">
+            <div id="book" className="scroll-mt-28 lg:col-span-3 bg-white rounded-2xl border border-gray-100 p-3 sm:p-5">
               <div className="px-2 pt-2 pb-4">
-                <h3 className="font-black text-[#1a1a2e] text-xl" style={{ fontFamily: "var(--font-raleway), sans-serif" }}>Claim Your 30% Off</h3>
-                <p className="mt-1 text-sm text-gray-400">Takes 60 seconds. We&rsquo;ll confirm your session within 24 hours.</p>
+                <h3 className="font-black text-[#1a1a2e] text-xl" style={{ fontFamily: "var(--font-raleway), sans-serif" }}>Book My Assessment</h3>
+                <p className="mt-1 text-sm text-gray-400">Takes 60 seconds. We&rsquo;ll be in touch to confirm your session.</p>
               </div>
               <OptInForm formId="1s5RE0ZUNOV0yCbUIhAS" formName="Athletes_LP Opt In Form" />
               <p className="px-2 pt-3 text-xs text-gray-400">Your details are private. No spam. Just a confirmation call from our team.</p>

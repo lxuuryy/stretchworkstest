@@ -5,20 +5,21 @@ type OptInFormProps = {
   formId: string;
   /** GoHighLevel form name, used for the data-form-name attribute */
   formName: string;
-  /** Default/initial height in px before the embed script resizes the iframe */
+  /** Initial reserved height in px. Set close to the form's real height so the
+   *  embed script barely reflows (a big reflow makes anchor scrolls overshoot). */
   height?: number;
 };
 
 // Embeds a GoHighLevel (go.acr.fit) inline opt-in form. The form_embed.js
-// script auto-resizes the iframe to fit its content via postMessage; the
-// wrapper minHeight keeps it visible before that runs. next/script dedupes by
-// src, so loading it on multiple pages only fetches once.
-export default function OptInForm({ formId, formName, height = 460 }: OptInFormProps) {
+// script auto-resizes the iframe to fit its content via postMessage. We give
+// the iframe an explicit (not percentage) starting height so layout is stable
+// before that runs. next/script dedupes by src, so it only loads once.
+export default function OptInForm({ formId, formName, height = 700 }: OptInFormProps) {
   return (
-    <div style={{ minHeight: height }}>
+    <div>
       <iframe
         src={`https://go.acr.fit/widget/form/${formId}`}
-        style={{ width: "100%", height: "100%", border: "none", borderRadius: "10px" }}
+        style={{ width: "100%", height: `${height}px`, border: "none", borderRadius: "10px", display: "block" }}
         id={`inline-${formId}`}
         data-layout="{'id':'INLINE'}"
         data-trigger-type="alwaysShow"

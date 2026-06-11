@@ -1,18 +1,20 @@
 import { asset } from "../lib/assets";
 import PainPoints from "./PainPoints";
 import Process from "./Process";
-import HeroStats from "./HeroStats";
+import HeroStats from "../components/HeroStats";
 import Navbar from "../components/Navbar";
+import OfferStrip from "../components/OfferStrip";
 import OptInForm from "../components/OptInForm";
 
 export default function RecoveryPage() {
   return (
     <div className="min-h-screen bg-white text-[#1a1a2e] antialiased" style={{ fontFamily: "var(--font-open-sans), sans-serif" }}>
 
-      <Navbar />
+      <OfferStrip ctaHref="#book" />
+      <Navbar topClass="top-9 sm:top-10" />
 
       {/* HERO */}
-      <section className="relative min-h-screen flex flex-col justify-between overflow-hidden pt-20">
+      <section className="relative min-h-dvh flex flex-col justify-between overflow-hidden pt-32">
         <video autoPlay muted loop playsInline className="absolute inset-0 w-full h-full object-cover" style={{ zIndex: 0 }}>
           <source src={asset("/recovery.mp4")} type="video/mp4" />
         </video>
@@ -20,10 +22,10 @@ export default function RecoveryPage() {
         <div className="absolute bottom-0 left-0 right-0 h-40" style={{ zIndex: 1, background: "linear-gradient(to top, rgba(0,0,0,0.6) 0%, transparent 100%)" }} />
 
         <div className="relative flex-1 flex items-center" style={{ zIndex: 2 }}>
-          <div className="max-w-7xl mx-auto px-8 md:px-16 w-full py-12">
+          <div className="max-w-7xl mx-auto px-8 md:px-16 w-full py-6">
             <h1
               className="font-black uppercase leading-none tracking-tight"
-              style={{ fontFamily: "var(--font-raleway), sans-serif", fontSize: "clamp(3rem, 8vw, 7rem)" }}
+              style={{ fontFamily: "var(--font-raleway), sans-serif", fontSize: "clamp(2.1rem, 4.5vw, 4.25rem)" }}
             >
               <span className="block text-white">Start Moving</span>
               <span className="block" style={{ color: "transparent", WebkitTextStroke: "2px #18a3dd", textShadow: "0 0 40px rgba(24,163,221,0.3)" }}>
@@ -31,21 +33,11 @@ export default function RecoveryPage() {
               </span>
               <span className="block text-white">And More Confidence.</span>
             </h1>
-            <p className="mt-8 text-white/60 leading-relaxed max-w-lg" style={{ fontSize: "clamp(1rem, 1.5vw, 1.2rem)" }}>
-              If your body has changed after injury, surgery, illness, or long periods of inactivity. StretchWorks offers calm, personalised support to help you reconnect with movement at your pace.
+            <p className="mt-6 text-white/65 leading-relaxed max-w-lg" style={{ fontSize: "clamp(1rem, 1.5vw, 1.2rem)" }}>
+              If your body has changed after injury, surgery, illness, or long periods of inactivity. StretchWorks offers calm, personalised support to help you reconnect with movement at your pace. <span className="text-[#18a3dd] font-bold">New clients get 30% off their first session.</span>
             </p>
-            {/* Promo */}
-            <div
-              className="mt-6 inline-flex items-center gap-3 rounded-full px-5 py-2.5 backdrop-blur-sm"
-              style={{ backgroundColor: "rgba(24,163,221,0.15)", border: "1px solid rgba(24,163,221,0.4)" }}
-            >
-              <span className="w-2 h-2 rounded-full bg-[#18a3dd] animate-pulse" />
-              <span className="text-white font-bold text-sm md:text-base tracking-wide" style={{ fontFamily: "var(--font-raleway), sans-serif" }}>
-                <span className="text-[#18a3dd]">30% OFF</span> your first session
-              </span>
-            </div>
 
-            <div className="mt-10 flex flex-wrap items-center gap-4">
+            <div className="mt-7 flex flex-wrap items-center gap-4">
               <a
                 href="#book"
                 className="inline-flex items-center gap-3 text-white font-bold px-8 py-4 rounded-full transition-all duration-200 hover:opacity-90"
@@ -185,7 +177,7 @@ export default function RecoveryPage() {
       </section>
 
       {/* BOOK CTA */}
-      <section id="book" className="py-32 px-6 bg-[#f8fbfe]">
+      <section className="py-32 px-6 bg-[#f8fbfe]">
         <div className="max-w-4xl mx-auto">
           <div className="rounded-3xl p-5 sm:p-10 md:p-16 text-center text-white" style={{ background: "linear-gradient(145deg, #002256 0%, #18a3dd 100%)", boxShadow: "0 24px 60px rgba(24,163,221,0.2)" }}>
             <span className="text-xs font-bold tracking-widest uppercase text-[#a9eee6]">First Visit</span>
@@ -193,7 +185,7 @@ export default function RecoveryPage() {
               Book Your<br />Mobility Assessment
             </h2>
             <p className="mt-6 text-white/70 text-lg leading-relaxed max-w-xl mx-auto">
-              A one-hour first visit where we look at what is happening in your body, guide you through a personalised assisted stretch, and talk through the best next step for you.
+              A 50-minute first visit where we look at what is happening in your body, guide you through a personalised assisted stretch, and talk through the best next step for you.
             </p>
             <div className="mt-10 grid md:grid-cols-3 gap-4">
               {[
@@ -207,7 +199,7 @@ export default function RecoveryPage() {
                 </div>
               ))}
             </div>
-            <div className="mt-12 bg-white rounded-2xl p-3 sm:p-5 text-left">
+            <div id="book" className="scroll-mt-24 mt-12 bg-white rounded-2xl p-3 sm:p-5 text-left">
               <OptInForm formId="9cYJgtRmQ5Fd2eqhGKRf" formName="Recovery_LP Opt In Form" />
             </div>
             <p className="mt-5 text-sm text-white/40">Movement does not have to feel this hard.</p>
