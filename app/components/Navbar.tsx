@@ -19,7 +19,7 @@ export default function Navbar({ cta = { label: "Book Today", href: "#book" }, t
             alt="StretchWorks"
             width={220}
             height={64}
-            className="h-12 md:h-14 w-auto object-contain"
+            className="h-16 md:h-16 w-auto object-contain"
           />
         </a>
 
