@@ -87,12 +87,12 @@ export default function AthleticPage() {
         {/* Content */}
         <div className="relative flex-1 flex items-center" style={{ zIndex: 2 }}>
           <div className="max-w-7xl mx-auto px-6 md:px-16 w-full pt-6 pb-16 md:pb-12">
-            <div className="grid lg:grid-cols-[1.1fr_0.9fr] gap-10 lg:gap-14 items-center">
+            <div className="grid lg:grid-cols-[1.3fr_0.7fr] gap-10 lg:gap-14 items-center">
 
               {/* Left — copy */}
               <div>
                 <span
-                  className="inline-block text-xs font-bold tracking-[0.18em] uppercase text-[#18a3dd]"
+                  className="inline-block text-sm md:text-base font-bold tracking-[0.18em] uppercase text-[#18a3dd]"
                   style={{ fontFamily: "var(--font-raleway), sans-serif" }}
                 >
                   Your Personalised Assisted Stretching Studio for Active Bodies
@@ -100,7 +100,7 @@ export default function AthleticPage() {
 
                 <h1
                   className="mt-4 font-black uppercase leading-none tracking-tight lg:whitespace-nowrap"
-                  style={{ fontFamily: "var(--font-raleway), sans-serif", fontSize: "clamp(1.9rem, 4.8vw, 3.75rem)" }}
+                  style={{ fontFamily: "var(--font-raleway), sans-serif", fontSize: "clamp(1.9rem, 5.5vw, 4.25rem)" }}
                 >
                   <span className="block text-white">Train Hard.</span>
                   <span className="brand-hl inline-block my-1">
@@ -110,7 +110,7 @@ export default function AthleticPage() {
                 </h1>
 
                 <p className="mt-5 max-w-xl">
-                  <span className="text-[#18a3dd] font-bold" style={{ fontSize: "clamp(0.95rem, 1.2vw, 1.05rem)" }}>New clients get 30% off their first session.</span>
+                  <span className="text-[#18a3dd] font-bold" style={{ fontSize: "clamp(1.05rem, 1.4vw, 1.3rem)" }}>New clients get 30% off their first session.</span>
                 </p>
 
                 <div className="mt-5 flex flex-col sm:flex-row items-stretch sm:items-center gap-3">

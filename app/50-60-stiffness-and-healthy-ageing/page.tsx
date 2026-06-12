@@ -26,7 +26,7 @@ export default function AgingPage() {
           <div className="max-w-7xl mx-auto px-8 md:px-16 w-full py-6">
             <h1
               className="font-black uppercase leading-none tracking-tight"
-              style={{ fontFamily: "var(--font-raleway), sans-serif", fontSize: "clamp(2.6rem, 5.2vw, 5rem)" }}
+              style={{ fontFamily: "var(--font-raleway), sans-serif", fontSize: "clamp(1.9rem, 6vw, 6rem)" }}
             >
               <span className="block text-white">Move Like</span>
               <span className="brand-hl inline-block my-1">
