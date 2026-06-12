@@ -86,31 +86,23 @@ export default function AthleticPage() {
 
         {/* Content */}
         <div className="relative flex-1 flex items-center" style={{ zIndex: 2 }}>
-          <div className="max-w-7xl mx-auto px-6 md:px-16 w-full pt-6 pb-16 md:pb-12">
-            <div className="grid lg:grid-cols-[1.3fr_0.7fr] gap-10 lg:gap-14 items-center">
+          <div className="max-w-7xl mx-auto px-6 md:px-16 w-full pt-2 pb-6 md:pt-6 md:pb-12">
+            <div className="grid lg:grid-cols-[1.3fr_0.7fr] gap-6 lg:gap-14 items-center">
 
               {/* Left — copy */}
               <div>
-                <span
-                  className="inline-block text-sm md:text-base font-bold tracking-[0.18em] uppercase text-[#18a3dd]"
-                  style={{ fontFamily: "var(--font-raleway), sans-serif" }}
-                >
-                  Your Personalised Assisted Stretching Studio for Active Bodies
-                </span>
-
                 <h1
-                  className="mt-4 font-black uppercase leading-none tracking-tight lg:whitespace-nowrap"
-                  style={{ fontFamily: "var(--font-raleway), sans-serif", fontSize: "clamp(1.9rem, 5.5vw, 4.25rem)" }}
+                  className="font-black uppercase leading-tight tracking-tight lg:whitespace-nowrap"
+                  style={{ fontFamily: "var(--font-raleway), sans-serif", fontSize: "clamp(2.35rem, 5.5vw, 4.25rem)" }}
                 >
                   <span className="block text-white">Train Hard.</span>
-                  <span className="brand-hl inline-block my-1">
-                    Recover Properly.
-                  </span>
+                  <span className="brand-hl">Recover Properly.</span>
                   <span className="block text-white">Stay In The Game.</span>
                 </h1>
 
                 <p className="mt-5 max-w-xl">
-                  <span className="text-[#18a3dd] font-bold" style={{ fontSize: "clamp(1.05rem, 1.4vw, 1.3rem)" }}>New clients get 30% off their first session.</span>
+                  <span className="text-[#18a3dd] font-bold" style={{ fontSize: "clamp(1.05rem, 1.4vw, 1.3rem)" }}>Get 30% OFF On Your Stretch</span>
+                  <span className="block mt-1 text-white/55 text-sm font-semibold uppercase tracking-[0.15em]">Limited Time Offer</span>
                 </p>
 
                 <div className="mt-5 flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
@@ -133,7 +125,7 @@ export default function AthleticPage() {
               </div>
 
               {/* Right — VSL video + floating badge */}
-              <div className="relative">
+              <div className="relative max-w-[78%] sm:max-w-sm mx-auto lg:max-w-none lg:mx-0">
                 <YouTubeEmbed id="hrMfUCiuWO4" title="StretchWorks — Athletic" />
                 <div
                   className="absolute -bottom-5 -left-3 sm:-left-5 max-w-[230px] rounded-2xl p-4 backdrop-blur-md"

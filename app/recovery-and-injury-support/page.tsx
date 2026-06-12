@@ -34,7 +34,8 @@ export default function RecoveryPage() {
               <span className="block text-white">And More Confidence.</span>
             </h1>
             <p className="mt-6 max-w-lg">
-              <span className="text-[#18a3dd] font-bold" style={{ fontSize: "clamp(1rem, 1.5vw, 1.2rem)" }}>New clients get 30% off their first session.</span>
+              <span className="text-[#18a3dd] font-bold" style={{ fontSize: "clamp(1rem, 1.5vw, 1.2rem)" }}>Get 30% OFF On Your Stretch</span>
+              <span className="block mt-1 text-white/55 text-sm font-semibold uppercase tracking-[0.15em]">Limited Time Offer</span>
             </p>
 
             <div className="mt-7 flex flex-wrap items-center gap-4">
