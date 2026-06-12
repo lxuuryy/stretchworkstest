@@ -1,19 +1,20 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { animate, motion } from "framer-motion";
+import { useEffect, useState } from "react";
 
 const stats = [
-  { value: "121+", label: "5-Star Google Reviews", stars: true },
-  { value: "10+ yrs", label: "Stretching Experience" },
-  { value: "1000+", label: "People Stretched" },
+  { value: 121, suffix: "+", label: "5-Star Google Reviews", stars: true },
+  { value: 10, suffix: "+ yrs", label: "Stretching Experience" },
+  { value: 1000, suffix: "+", label: "People Stretched" },
 ];
 
 const container = {
   hidden: {},
   show: {
     transition: {
-      staggerChildren: 0.18,
-      delayChildren: 0.3,
+      staggerChildren: 0.08,
+      delayChildren: 0.05,
     },
   },
 };
@@ -27,6 +28,29 @@ const item = {
     transition: { duration: 0.65, ease: [0.22, 1, 0.36, 1] as [number, number, number, number] },
   },
 };
+
+// Counts up from 0 to `to` immediately on page load.
+function StatNumber({ to, suffix }: { to: number; suffix: string }) {
+  const [val, setVal] = useState(0);
+
+  useEffect(() => {
+    const controls = animate(0, to, {
+      duration: 1.2,
+      ease: [0.22, 1, 0.36, 1],
+      onUpdate: (v) => setVal(Math.round(v)),
+    });
+    return () => controls.stop();
+  }, [to]);
+
+  return (
+    <span
+      className="font-black leading-none"
+      style={{ color: "#18a3dd", fontFamily: "var(--font-raleway), sans-serif", fontSize: "clamp(1.25rem, 4vw, 2.4rem)" }}
+    >
+      {val}{suffix}
+    </span>
+  );
+}
 
 export default function HeroStats() {
   return (
@@ -61,12 +85,7 @@ export default function HeroStats() {
                 ))}
               </div>
             )}
-            <span
-              className="font-black leading-none"
-              style={{ color: "#18a3dd", fontFamily: "var(--font-raleway), sans-serif", fontSize: "clamp(1.25rem, 4vw, 2.4rem)" }}
-            >
-              {s.value}
-            </span>
+            <StatNumber to={s.value} suffix={s.suffix} />
             <span
               className="text-white/75 font-semibold uppercase tracking-wider leading-tight"
               style={{ fontSize: "clamp(0.58rem, 1.5vw, 0.78rem)" }}

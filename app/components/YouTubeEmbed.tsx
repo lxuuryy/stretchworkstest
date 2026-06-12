@@ -3,10 +3,12 @@ type YouTubeEmbedProps = {
   id: string;
   title?: string;
   className?: string;
+  /** Load the iframe immediately instead of lazily (use for above-the-fold/hero videos). */
+  eager?: boolean;
 };
 
 // Responsive 16:9 YouTube embed framed to match the site's blue accent.
-export default function YouTubeEmbed({ id, title = "StretchWorks video", className = "" }: YouTubeEmbedProps) {
+export default function YouTubeEmbed({ id, title = "StretchWorks video", className = "", eager = false }: YouTubeEmbedProps) {
   return (
     <div
       className={`relative w-full overflow-hidden rounded-2xl ${className}`}
@@ -22,7 +24,7 @@ export default function YouTubeEmbed({ id, title = "StretchWorks video", classNa
         title={title}
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         allowFullScreen
-        loading="lazy"
+        loading={eager ? "eager" : "lazy"}
       />
     </div>
   );

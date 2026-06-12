@@ -100,10 +100,10 @@ export default function AthleticPage() {
                   <span className="block text-white">Stay In The Game.</span>
                 </h1>
 
-                <p className="mt-5 max-w-xl">
-                  <span className="text-[#18a3dd] font-bold" style={{ fontSize: "clamp(1.05rem, 1.4vw, 1.3rem)" }}>Get 30% OFF On Your Stretch</span>
-                  <span className="block mt-1 text-white/55 text-sm font-semibold uppercase tracking-[0.15em]">Limited Time Offer</span>
-                </p>
+                <div className="mt-6 inline-flex flex-col gap-1 pl-4" style={{ borderLeft: "3px solid #18a3dd" }}>
+                  <span className="text-white font-bold leading-tight" style={{ fontFamily: "var(--font-raleway), sans-serif", fontSize: "clamp(1.15rem, 1.6vw, 1.45rem)" }}>Get 30% OFF On Your Stretch</span>
+                  <span className="text-white/50 text-[0.7rem] font-semibold uppercase tracking-[0.25em]">Limited Time Offer</span>
+                </div>
 
                 <div className="mt-5 flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
                   <a
@@ -124,9 +124,9 @@ export default function AthleticPage() {
 
               </div>
 
-              {/* Right — VSL video + floating badge */}
-              <div className="relative max-w-[78%] sm:max-w-sm mx-auto lg:max-w-none lg:mx-0">
-                <YouTubeEmbed id="hrMfUCiuWO4" title="StretchWorks — Athletic" />
+              {/* Right — VSL video + floating badge (desktop only; on mobile it moves below the hero) */}
+              <div className="relative hidden lg:block">
+                <YouTubeEmbed id="hrMfUCiuWO4" title="StretchWorks — Athletic" eager />
                 <div
                   className="absolute -bottom-5 -left-3 sm:-left-5 max-w-[230px] rounded-2xl p-4 backdrop-blur-md"
                   style={{ background: "rgba(8,14,26,0.85)", border: "1px solid rgba(24,163,221,0.4)", boxShadow: "0 16px 40px rgba(0,0,0,0.5)" }}
@@ -143,6 +143,22 @@ export default function AthleticPage() {
         </div>
 
         <HeroStats />
+      </section>
+
+      {/* ── MOBILE VSL (moved below hero so the hero stays compact + stats show first) ── */}
+      <section className="lg:hidden px-6 pt-12 pb-14" style={{ background: "linear-gradient(180deg, #001433 0%, #002a5c 100%)" }}>
+        <div className="relative max-w-md mx-auto">
+          <YouTubeEmbed id="hrMfUCiuWO4" title="StretchWorks — Athletic" eager />
+          <div
+            className="absolute -bottom-5 -left-3 max-w-[230px] rounded-2xl p-4 backdrop-blur-md"
+            style={{ background: "rgba(8,14,26,0.9)", border: "1px solid rgba(24,163,221,0.4)", boxShadow: "0 16px 40px rgba(0,0,0,0.5)" }}
+          >
+            <div className="text-[#18a3dd] font-black text-lg leading-none" style={{ fontFamily: "var(--font-raleway), sans-serif" }}>
+              One session
+            </div>
+            <p className="mt-1 text-white/70 text-xs leading-snug">And I felt the difference at training</p>
+          </div>
+        </div>
       </section>
 
       <PainPoints />

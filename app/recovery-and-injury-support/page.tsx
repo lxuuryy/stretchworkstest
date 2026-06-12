@@ -33,10 +33,10 @@ export default function RecoveryPage() {
               </span>
               <span className="block text-white">And More Confidence.</span>
             </h1>
-            <p className="mt-6 max-w-lg">
-              <span className="text-[#18a3dd] font-bold" style={{ fontSize: "clamp(1rem, 1.5vw, 1.2rem)" }}>Get 30% OFF On Your Stretch</span>
-              <span className="block mt-1 text-white/55 text-sm font-semibold uppercase tracking-[0.15em]">Limited Time Offer</span>
-            </p>
+            <div className="mt-6 inline-flex flex-col gap-1 pl-4" style={{ borderLeft: "3px solid #18a3dd" }}>
+              <span className="text-white font-bold leading-tight" style={{ fontFamily: "var(--font-raleway), sans-serif", fontSize: "clamp(1.15rem, 1.6vw, 1.45rem)" }}>Get 30% OFF On Your Stretch</span>
+              <span className="text-white/50 text-[0.7rem] font-semibold uppercase tracking-[0.25em]">Limited Time Offer</span>
+            </div>
 
             <div className="mt-7 flex flex-wrap items-center gap-4">
               <a
