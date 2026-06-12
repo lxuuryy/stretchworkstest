@@ -102,12 +102,12 @@ export default function Process() {
       <div ref={outerRef} style={{ height: "220vh" }}>
         <div className="sticky top-0 flex flex-col" style={{ height: "100vh", overflow: "hidden" }}>
 
-          <div className="shrink-0 px-6 pt-10 pb-6 border-b" style={{ background: "#001433", borderColor: "rgba(24,163,221,0.15)", zIndex: 20 }}>
+          <div className="shrink-0 px-6 pt-32 pb-6 border-b" style={{ background: "#001433", borderColor: "rgba(24,163,221,0.15)", zIndex: 20 }}>
             <div className="max-w-3xl mx-auto">
               <span className="text-xs font-bold tracking-[0.2em] uppercase text-[#18a3dd]" style={{ fontFamily: "var(--font-raleway), sans-serif" }}>The Process</span>
               <h2 className="mt-2 font-black uppercase leading-tight text-white" style={{ fontFamily: "var(--font-raleway), sans-serif", fontSize: "clamp(1.8rem, 3.5vw, 2.8rem)" }}>
                 No Guesswork. No Group Class.{" "}
-                <span style={{ color: "transparent", WebkitTextStroke: "2px #18a3dd" }}>
+                <span className="brand-hl">
                   Just Personalised Help.
                 </span>
               </h2>

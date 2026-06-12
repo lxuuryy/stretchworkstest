@@ -25,16 +25,16 @@ export default function RecoveryPage() {
           <div className="max-w-7xl mx-auto px-8 md:px-16 w-full py-6">
             <h1
               className="font-black uppercase leading-none tracking-tight"
-              style={{ fontFamily: "var(--font-raleway), sans-serif", fontSize: "clamp(2.1rem, 4.5vw, 4.25rem)" }}
+              style={{ fontFamily: "var(--font-raleway), sans-serif", fontSize: "clamp(2.6rem, 5.2vw, 5rem)" }}
             >
               <span className="block text-white">Start Moving</span>
-              <span className="block" style={{ color: "transparent", WebkitTextStroke: "2px #18a3dd", textShadow: "0 0 40px rgba(24,163,221,0.3)" }}>
+              <span className="brand-hl inline-block my-1">
                 With More Ease.
               </span>
               <span className="block text-white">And More Confidence.</span>
             </h1>
-            <p className="mt-6 text-white/65 leading-relaxed max-w-lg" style={{ fontSize: "clamp(1rem, 1.5vw, 1.2rem)" }}>
-              If your body has changed after injury, surgery, illness, or long periods of inactivity. StretchWorks offers calm, personalised support to help you reconnect with movement at your pace. <span className="text-[#18a3dd] font-bold">New clients get 30% off their first session.</span>
+            <p className="mt-6 max-w-lg">
+              <span className="text-[#18a3dd] font-bold" style={{ fontSize: "clamp(1rem, 1.5vw, 1.2rem)" }}>New clients get 30% off their first session.</span>
             </p>
 
             <div className="mt-7 flex flex-wrap items-center gap-4">
@@ -78,7 +78,7 @@ export default function RecoveryPage() {
                 style={{ fontFamily: "var(--font-raleway), sans-serif", fontSize: "clamp(2rem, 4vw, 3.2rem)" }}
               >
                 It Works Well{" "}
-                <span style={{ color: "transparent", WebkitTextStroke: "2px #18a3dd" }}>
+                <span className="brand-hl">
                   Alongside
                 </span>{" "}
                 Other Care.
@@ -127,7 +127,7 @@ export default function RecoveryPage() {
             <div>
               <span className="text-xs font-bold tracking-[0.2em] uppercase text-[#18a3dd]" style={{ fontFamily: "var(--font-raleway), sans-serif" }}>Client Reviews</span>
               <h2 className="mt-3 font-black uppercase leading-tight text-white" style={{ fontFamily: "var(--font-raleway), sans-serif", fontSize: "clamp(2rem, 4vw, 3.2rem)" }}>
-                What Clients <span style={{ color: "transparent", WebkitTextStroke: "2px #18a3dd" }}>Say</span>
+                What Clients <span className="brand-hl">Say</span>
               </h2>
             </div>
             <div className="flex items-center gap-4 shrink-0">
@@ -208,14 +208,14 @@ export default function RecoveryPage() {
       </section>
 
       {/* FOOTER */}
-      <footer className="border-t border-gray-100 py-16 px-6 bg-white">
+      <footer className="border-t border-white/10 py-16 px-6 bg-[#001433]">
         <div className="max-w-6xl mx-auto grid md:grid-cols-4 gap-10">
           <div className="md:col-span-2">
-            <img src={asset("/homeImage.png")} alt="StretchWorks" width={140} height={40} className="h-8 w-auto object-contain mb-3" />
+            <img src={asset("/homeImage.png")} alt="StretchWorks" width={240} height={70} className="h-16 w-auto object-contain mb-4" />
             <p className="text-gray-400 text-sm leading-relaxed max-w-xs">Personalised assisted stretching for recovery, injury support, and rebuilding ease in your body.</p>
           </div>
           <div>
-            <h4 className="text-[#1a1a2e] font-bold mb-4 text-xs uppercase tracking-widest" style={{ fontFamily: "var(--font-raleway), sans-serif" }}>Studio Hours</h4>
+            <h4 className="text-white font-bold mb-4 text-xs uppercase tracking-widest" style={{ fontFamily: "var(--font-raleway), sans-serif" }}>Studio Hours</h4>
             <ul className="text-sm space-y-1.5 text-gray-400">
               <li>Mon – Thu: 6:00 AM – 7:00 PM</li>
               <li>Friday: 6:00 AM – 4:00 PM</li>
@@ -224,7 +224,7 @@ export default function RecoveryPage() {
             </ul>
           </div>
           <div>
-            <h4 className="text-[#1a1a2e] font-bold mb-4 text-xs uppercase tracking-widest" style={{ fontFamily: "var(--font-raleway), sans-serif" }}><a href="/contact" className="hover:text-[#18a3dd] transition-colors">Contact</a></h4>
+            <h4 className="text-white font-bold mb-4 text-xs uppercase tracking-widest" style={{ fontFamily: "var(--font-raleway), sans-serif" }}><a href="/contact" className="hover:text-[#18a3dd] transition-colors">Contact</a></h4>
             <ul className="text-sm space-y-1.5 text-gray-400">
               <li>0468 021 079</li>
               <li className="break-all">studio.manager@stretchworks.com.au</li>
@@ -232,7 +232,7 @@ export default function RecoveryPage() {
             </ul>
           </div>
         </div>
-        <div className="max-w-6xl mx-auto border-t border-gray-100 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-300">
+        <div className="max-w-6xl mx-auto border-t border-white/10 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-white/40">
           <span>© 2026 StretchWorks. All rights reserved.</span>
           <div className="flex gap-6">
             <a href="https://www.stretchworks.com.au/terms-of-service/" className="hover:text-[#18a3dd] transition-colors">Terms</a>

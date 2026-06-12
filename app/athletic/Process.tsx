@@ -184,7 +184,7 @@ export default function Process() {
 
           {/* ── HEADING (top portion, solid background) ─────────────── */}
           <div
-            className="shrink-0 px-6 pt-10 pb-6 border-b"
+            className="shrink-0 px-6 pt-32 pb-6 border-b"
             style={{
               background: "#001433",
               borderColor: "rgba(24,163,221,0.15)",
@@ -206,7 +206,7 @@ export default function Process() {
                 }}
               >
                 Built For Recovery.{" "}
-                <span style={{ color: "transparent", WebkitTextStroke: "2px #18a3dd" }}>
+                <span className="brand-hl">
                   Simple To Start.
                 </span>
               </h2>

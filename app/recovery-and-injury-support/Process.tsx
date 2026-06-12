@@ -137,7 +137,7 @@ export default function Process() {
 
           {/* Heading */}
           <div
-            className="shrink-0 px-6 pt-10 pb-6 border-b"
+            className="shrink-0 px-6 pt-32 pb-6 border-b"
             style={{ background: "#001433", borderColor: "rgba(24,163,221,0.15)", zIndex: 20 }}
           >
             <div className="max-w-3xl mx-auto">
@@ -152,7 +152,7 @@ export default function Process() {
                 style={{ fontFamily: "var(--font-raleway), sans-serif", fontSize: "clamp(1.8rem, 3.5vw, 2.8rem)" }}
               >
                 Supportive. Personal.{" "}
-                <span style={{ color: "transparent", WebkitTextStroke: "2px #18a3dd" }}>
+                <span className="brand-hl">
                   Not Rushed.
                 </span>
               </h2>

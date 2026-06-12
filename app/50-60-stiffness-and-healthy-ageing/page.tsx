@@ -26,17 +26,17 @@ export default function AgingPage() {
           <div className="max-w-7xl mx-auto px-8 md:px-16 w-full py-6">
             <h1
               className="font-black uppercase leading-none tracking-tight"
-              style={{ fontFamily: "var(--font-raleway), sans-serif", fontSize: "clamp(2.1rem, 4.5vw, 4.25rem)" }}
+              style={{ fontFamily: "var(--font-raleway), sans-serif", fontSize: "clamp(2.6rem, 5.2vw, 5rem)" }}
             >
               <span className="block text-white">Move Like</span>
-              <span className="block" style={{ color: "transparent", WebkitTextStroke: "2px #18a3dd", textShadow: "0 0 40px rgba(24,163,221,0.3)" }}>
+              <span className="brand-hl inline-block my-1">
                 Yourself Again.
               </span>
               <span className="block text-white">Without Fighting</span>
               <span className="block text-white/60">Your Body.</span>
             </h1>
-            <p className="mt-6 text-white/65 leading-relaxed max-w-lg" style={{ fontSize: "clamp(1rem, 1.5vw, 1.2rem)" }}>
-              Stiffness, tightness, and reduced range don't have to be permanent. StretchWorks gives people in their 50s and 60s a smarter way to move better. and stay that way. <span className="text-[#18a3dd] font-bold">New clients get 30% off their first session.</span>
+            <p className="mt-6 max-w-lg">
+              <span className="text-[#18a3dd] font-bold" style={{ fontSize: "clamp(1rem, 1.5vw, 1.2rem)" }}>New clients get 30% off their first session.</span>
             </p>
 
             <div className="mt-7 flex flex-wrap items-center gap-4">
@@ -80,7 +80,7 @@ export default function AgingPage() {
                 style={{ fontFamily: "var(--font-raleway), sans-serif", fontSize: "clamp(2rem, 4vw, 3.2rem)" }}
               >
                 Built For People{" "}
-                <span style={{ color: "transparent", WebkitTextStroke: "2px #18a3dd" }}>
+                <span className="brand-hl">
                   Who Still Want
                 </span>{" "}
                 Plenty Out Of Life.
@@ -125,7 +125,7 @@ export default function AgingPage() {
             <div>
               <span className="text-xs font-bold tracking-[0.2em] uppercase text-[#18a3dd]" style={{ fontFamily: "var(--font-raleway), sans-serif" }}>Client Reviews</span>
               <h2 className="mt-3 font-black uppercase leading-tight text-white" style={{ fontFamily: "var(--font-raleway), sans-serif", fontSize: "clamp(2rem, 4vw, 3.2rem)" }}>
-                Real Results, <span style={{ color: "transparent", WebkitTextStroke: "2px #18a3dd" }}>Real People</span>
+                Real Results, <span className="brand-hl">Real People</span>
               </h2>
             </div>
             <div className="flex items-center gap-4 shrink-0">
@@ -185,7 +185,7 @@ export default function AgingPage() {
               ))}
             </div>
             <div id="book" className="scroll-mt-24 mt-12 bg-white rounded-2xl p-3 sm:p-5 text-left">
-              <OptInForm formId="Sbs6nDwOoPj8gFxO7nJv" formName="Adults_LP Opt In Form" />
+              <OptInForm formId="Sbs6nDwOoPj8gFxO7nJv" formName="Adults_LP Opt In Form" height={900} />
             </div>
             <p className="mt-5 text-sm text-white/40">You do not have to keep adapting your life to a tight body.</p>
           </div>
@@ -193,14 +193,14 @@ export default function AgingPage() {
       </section>
 
       {/* FOOTER */}
-      <footer className="border-t border-gray-100 py-16 px-6 bg-white">
+      <footer className="border-t border-white/10 py-16 px-6 bg-[#001433]">
         <div className="max-w-6xl mx-auto grid md:grid-cols-4 gap-10">
           <div className="md:col-span-2">
-            <img src={asset("/homeImage.png")} alt="StretchWorks" width={140} height={40} className="h-8 w-auto object-contain mb-3" />
+            <img src={asset("/homeImage.png")} alt="StretchWorks" width={240} height={70} className="h-16 w-auto object-contain mb-4" />
             <p className="text-gray-400 text-sm leading-relaxed max-w-xs">Personalised assisted stretching for people in their 50s and 60s who want to move better and stay that way.</p>
           </div>
           <div>
-            <h4 className="text-[#1a1a2e] font-bold mb-4 text-xs uppercase tracking-widest" style={{ fontFamily: "var(--font-raleway), sans-serif" }}>Studio Hours</h4>
+            <h4 className="text-white font-bold mb-4 text-xs uppercase tracking-widest" style={{ fontFamily: "var(--font-raleway), sans-serif" }}>Studio Hours</h4>
             <ul className="text-sm space-y-1.5 text-gray-400">
               <li>Mon – Thu: 6:00 AM – 7:00 PM</li>
               <li>Friday: 6:00 AM – 4:00 PM</li>
@@ -209,7 +209,7 @@ export default function AgingPage() {
             </ul>
           </div>
           <div>
-            <h4 className="text-[#1a1a2e] font-bold mb-4 text-xs uppercase tracking-widest" style={{ fontFamily: "var(--font-raleway), sans-serif" }}><a href="/contact" className="hover:text-[#18a3dd] transition-colors">Contact</a></h4>
+            <h4 className="text-white font-bold mb-4 text-xs uppercase tracking-widest" style={{ fontFamily: "var(--font-raleway), sans-serif" }}><a href="/contact" className="hover:text-[#18a3dd] transition-colors">Contact</a></h4>
             <ul className="text-sm space-y-1.5 text-gray-400">
               <li>0468 021 079</li>
               <li className="break-all">studio.manager@stretchworks.com.au</li>
@@ -217,7 +217,7 @@ export default function AgingPage() {
             </ul>
           </div>
         </div>
-        <div className="max-w-6xl mx-auto border-t border-gray-100 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-300">
+        <div className="max-w-6xl mx-auto border-t border-white/10 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-white/40">
           <span>© 2026 StretchWorks. All rights reserved.</span>
           <div className="flex gap-6">
             <a href="https://www.stretchworks.com.au/terms-of-service/" className="hover:text-[#18a3dd] transition-colors">Terms</a>

@@ -19,7 +19,12 @@ export default function OptInForm({ formId, formName, height = 600 }: OptInFormP
     <div>
       <iframe
         src={`https://go.acr.fit/widget/form/${formId}`}
-        style={{ width: "100%", height: `${height}px`, border: "none", borderRadius: "10px", display: "block" }}
+        // form_embed.js auto-resizes the iframe to the form's content height.
+        // scrolling="no" stops the iframe ever showing its own scrollbar (e.g.
+        // when the resized height is a hair short of the content), so all pages
+        // behave the same — no inner scroll.
+        scrolling="no"
+        style={{ width: "100%", height: `${height}px`, border: "none", borderRadius: "10px", display: "block", overflow: "hidden" }}
         id={`inline-${formId}`}
         data-layout="{'id':'INLINE'}"
         data-trigger-type="alwaysShow"

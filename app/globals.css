@@ -33,3 +33,16 @@ body {
   0%   { transform: translateX(-100%); }
   100% { transform: translateX(200%); }
 }
+
+/* Brand highlight — solid blue marker behind accent words, white text.
+   Replaces the old hollow-outline style for far better readability.
+   box-decoration-break keeps the block hugging the words and wrapping
+   cleanly onto each line. */
+.brand-hl {
+  background-color: #18a3dd;
+  color: #ffffff;
+  padding: 0.08em 0.34em;
+  border-radius: 0.2em;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}

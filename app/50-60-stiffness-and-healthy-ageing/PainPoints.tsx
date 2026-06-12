@@ -71,12 +71,12 @@ export default function PainPoints() {
               Sound Familiar?
             </span>
             <h2
-              className="mt-5 font-black uppercase leading-[0.95] text-[#1a1a2e]"
+              className="mt-5 font-black uppercase leading-tight text-[#1a1a2e]"
               style={{ fontFamily: "var(--font-raleway), sans-serif", fontSize: "clamp(2.4rem, 4vw, 3.8rem)" }}
             >
               You Shouldn't<br />
               Need An Hour{" "}
-              <span style={{ color: "transparent", WebkitTextStroke: "2px #18a3dd" }}>
+              <span className="brand-hl">
                 Just To
               </span>
               <br />Loosen Up.

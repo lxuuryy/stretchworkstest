@@ -87,7 +87,7 @@ export default function AthleticPage() {
         {/* Content */}
         <div className="relative flex-1 flex items-center" style={{ zIndex: 2 }}>
           <div className="max-w-7xl mx-auto px-6 md:px-16 w-full pt-6 pb-16 md:pb-12">
-            <div className="grid lg:grid-cols-2 gap-10 lg:gap-14 items-center">
+            <div className="grid lg:grid-cols-[1.1fr_0.9fr] gap-10 lg:gap-14 items-center">
 
               {/* Left — copy */}
               <div>
@@ -99,21 +99,18 @@ export default function AthleticPage() {
                 </span>
 
                 <h1
-                  className="mt-4 font-black uppercase leading-none tracking-tight"
-                  style={{ fontFamily: "var(--font-raleway), sans-serif", fontSize: "clamp(1.9rem, 3.4vw, 3.25rem)" }}
+                  className="mt-4 font-black uppercase leading-none tracking-tight lg:whitespace-nowrap"
+                  style={{ fontFamily: "var(--font-raleway), sans-serif", fontSize: "clamp(1.9rem, 4.8vw, 3.75rem)" }}
                 >
                   <span className="block text-white">Train Hard.</span>
-                  <span
-                    className="block"
-                    style={{ color: "transparent", WebkitTextStroke: "2px #18a3dd", textShadow: "0 0 40px rgba(24,163,221,0.3)" }}
-                  >
+                  <span className="brand-hl inline-block my-1">
                     Recover Properly.
                   </span>
                   <span className="block text-white">Stay In The Game.</span>
                 </h1>
 
-                <p className="mt-4 text-white/65 leading-relaxed max-w-xl" style={{ fontSize: "clamp(0.95rem, 1.2vw, 1.05rem)" }}>
-                  Whether you&rsquo;re chasing a PB, trying to stay loose between rounds, or sick of little niggles turning into bigger setbacks, StretchWorks gives active people a smarter way to recover, move better, and keep performing. <span className="text-[#18a3dd] font-bold">New clients get 30% off their first session.</span>
+                <p className="mt-5 max-w-xl">
+                  <span className="text-[#18a3dd] font-bold" style={{ fontSize: "clamp(0.95rem, 1.2vw, 1.05rem)" }}>New clients get 30% off their first session.</span>
                 </p>
 
                 <div className="mt-5 flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
@@ -173,7 +170,7 @@ export default function AthleticPage() {
                 style={{ fontFamily: "var(--font-raleway), sans-serif", fontSize: "clamp(2rem, 4vw, 3.2rem)" }}
               >
                 What A Session{" "}
-                <span style={{ color: "transparent", WebkitTextStroke: "2px #18a3dd" }}>Looks Like</span>
+                <span className="brand-hl">Looks Like</span>
               </h2>
               <p className="mt-5 text-gray-500 leading-relaxed text-lg">
                 It starts with a HumanTrak mobility assessment, then a targeted assisted stretch guided by your coach. No group class, no generic routine. Just a proper one-to-one session built around how your body is moving right now.
@@ -210,7 +207,7 @@ export default function AthleticPage() {
               style={{ fontFamily: "var(--font-raleway), sans-serif", fontSize: "clamp(2rem, 4vw, 3.2rem)" }}
             >
               For People Who Want Their Body{" "}
-              <span style={{ color: "transparent", WebkitTextStroke: "2px #18a3dd" }}>To Keep Up.</span>
+              <span className="brand-hl">To Keep Up.</span>
             </h2>
           </div>
 
@@ -314,7 +311,7 @@ export default function AthleticPage() {
             </span>
             <h2 className="mt-3 font-black uppercase leading-tight text-white" style={{ fontFamily: "var(--font-raleway), sans-serif", fontSize: "clamp(2rem, 4vw, 3.2rem)" }}>
               This Is What People{" "}
-              <span style={{ color: "transparent", WebkitTextStroke: "2px #18a3dd" }}>Feel Early.</span>
+              <span className="brand-hl">Feel Early.</span>
             </h2>
           </div>
 
@@ -407,18 +404,16 @@ export default function AthleticPage() {
       </section>
 
       {/* ── FOOTER ─────────────────────────────────────────────────────── */}
-      <footer className="border-t border-gray-100 py-16 px-6 bg-white">
+      <footer className="border-t border-white/10 py-16 px-6 bg-[#001433]">
         <div className="max-w-6xl mx-auto grid md:grid-cols-4 gap-10">
           <div className="md:col-span-2">
-            <span className="text-lg font-black tracking-widest uppercase text-[#18a3dd]" style={{ fontFamily: "var(--font-raleway), sans-serif" }}>
-              Stretch<span className="text-[#1a1a2e]">Works</span>
-            </span>
+            <img src={asset("/homeImage.png")} alt="StretchWorks" width={240} height={70} className="h-16 w-auto object-contain mb-4" />
             <p className="mt-3 text-gray-400 text-sm leading-relaxed max-w-xs">
               Personalised assisted stretching in Melbourne for people who train hard and want to stay in the game.
             </p>
           </div>
           <div>
-            <h4 className="text-[#1a1a2e] font-bold mb-4 text-xs uppercase tracking-widest" style={{ fontFamily: "var(--font-raleway), sans-serif" }}>Studio Hours</h4>
+            <h4 className="text-white font-bold mb-4 text-xs uppercase tracking-widest" style={{ fontFamily: "var(--font-raleway), sans-serif" }}>Studio Hours</h4>
             <ul className="text-sm space-y-1.5 text-gray-400">
               <li>Mon – Thu: 6:00 AM – 7:00 PM</li>
               <li>Friday: 6:00 AM – 4:00 PM</li>
@@ -427,7 +422,7 @@ export default function AthleticPage() {
             </ul>
           </div>
           <div>
-            <h4 className="text-[#1a1a2e] font-bold mb-4 text-xs uppercase tracking-widest" style={{ fontFamily: "var(--font-raleway), sans-serif" }}><a href="/contact" className="hover:text-[#18a3dd] transition-colors">Contact</a></h4>
+            <h4 className="text-white font-bold mb-4 text-xs uppercase tracking-widest" style={{ fontFamily: "var(--font-raleway), sans-serif" }}><a href="/contact" className="hover:text-[#18a3dd] transition-colors">Contact</a></h4>
             <ul className="text-sm space-y-1.5 text-gray-400">
               <li>0468 021 079</li>
               <li className="break-all">studio.manager@stretchworks.com.au</li>
@@ -435,7 +430,7 @@ export default function AthleticPage() {
             </ul>
           </div>
         </div>
-        <div className="max-w-6xl mx-auto border-t border-gray-100 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-300">
+        <div className="max-w-6xl mx-auto border-t border-white/10 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-white/40">
           <span>© 2026 StretchWorks. All rights reserved.</span>
           <div className="flex gap-6">
             <a href="https://www.stretchworks.com.au/terms-of-service/" className="hover:text-[#18a3dd] transition-colors">Terms</a>
