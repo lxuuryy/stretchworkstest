@@ -113,13 +113,6 @@ export default function AthleticPage() {
                   >
                     Book My Assessment →
                   </a>
-                  <a
-                    href="tel:+61468021079"
-                    className="inline-flex items-center justify-center gap-2 border border-white/20 text-white/80 hover:text-white hover:border-white/40 font-semibold px-6 py-4 rounded-full transition-all duration-200 text-sm backdrop-blur-sm"
-                    style={{ fontFamily: "var(--font-raleway), sans-serif" }}
-                  >
-                    <span className="text-[#18a3dd]">↗</span> Call Now
-                  </a>
                 </div>
 
               </div>
