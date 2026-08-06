@@ -14,6 +14,10 @@
 
 html {
   scroll-behavior: smooth;
+  /* Raleway defaults to old-style figures where 3/4/5/7/9 dip below the
+     baseline; force lining figures so digits sit on one line everywhere. */
+  font-variant-numeric: lining-nums;
+  font-feature-settings: "lnum" 1;
 }
 
 @media (prefers-color-scheme: dark) {

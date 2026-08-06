@@ -3,15 +3,13 @@ import PainPoints from "./PainPoints";
 import Process from "./Process";
 import HeroStats from "../components/HeroStats";
 import Navbar from "../components/Navbar";
-import OfferStrip from "../components/OfferStrip";
 import OptInForm from "../components/OptInForm";
 
 export default function AgingPage() {
   return (
     <div className="min-h-screen bg-white text-[#1a1a2e] antialiased" style={{ fontFamily: "var(--font-open-sans), sans-serif" }}>
 
-      <OfferStrip ctaHref="#book" />
-      <Navbar topClass="top-9 sm:top-10" />
+      <Navbar />
 
       {/* HERO */}
       <section className="relative min-h-dvh flex flex-col justify-between overflow-hidden pt-32">
@@ -35,11 +33,6 @@ export default function AgingPage() {
               <span className="block text-white">Without Fighting</span>
               <span className="block text-white/60">Your Body.</span>
             </h1>
-            <div className="mt-6 inline-flex flex-col gap-1 pl-4" style={{ borderLeft: "3px solid #18a3dd" }}>
-              <span className="text-white font-bold leading-tight" style={{ fontFamily: "var(--font-raleway), sans-serif", fontSize: "clamp(1.15rem, 1.6vw, 1.45rem)" }}>Get 30% OFF On Your Stretch</span>
-              <span className="text-white/50 text-[0.7rem] font-semibold uppercase tracking-[0.25em]">Limited Time Offer</span>
-            </div>
-
             <div className="mt-7 flex flex-wrap items-center gap-4">
               <a
                 href="#book"

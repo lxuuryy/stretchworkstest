@@ -1,17 +1,16 @@
 import { asset } from "../lib/assets";
 import PainPoints from "./PainPoints";
 import Process from "./Process";
+import HeroKeyPoints from "../components/HeroKeyPoints";
 import HeroStats from "../components/HeroStats";
 import Navbar from "../components/Navbar";
-import OfferStrip from "../components/OfferStrip";
 import OptInForm from "../components/OptInForm";
 
 export default function RecoveryPage() {
   return (
     <div className="min-h-screen bg-white text-[#1a1a2e] antialiased" style={{ fontFamily: "var(--font-open-sans), sans-serif" }}>
 
-      <OfferStrip ctaHref="#book" />
-      <Navbar topClass="top-9 sm:top-10" />
+      <Navbar />
 
       {/* HERO */}
       <section className="relative min-h-dvh flex flex-col justify-between overflow-hidden pt-32">
@@ -25,26 +24,35 @@ export default function RecoveryPage() {
           <div className="max-w-7xl mx-auto px-8 md:px-16 w-full py-6">
             <h1
               className="font-black uppercase leading-none tracking-tight"
-              style={{ fontFamily: "var(--font-raleway), sans-serif", fontSize: "clamp(1.9rem, 6vw, 6rem)" }}
+              style={{ fontFamily: "var(--font-raleway), sans-serif", fontSize: "clamp(1.7rem, 4.5vw, 4.5rem)" }}
             >
-              <span className="block text-white">Start Moving</span>
+              <span className="block text-white">Move Better, Feel Looser,</span>
               <span className="brand-hl inline-block my-1">
-                With More Ease.
+                And Know What Your Body Needs
               </span>
-              <span className="block text-white">And More Confidence.</span>
+              <span className="block text-white">For $65</span>
             </h1>
-            <div className="mt-6 inline-flex flex-col gap-1 pl-4" style={{ borderLeft: "3px solid #18a3dd" }}>
-              <span className="text-white font-bold leading-tight" style={{ fontFamily: "var(--font-raleway), sans-serif", fontSize: "clamp(1.15rem, 1.6vw, 1.45rem)" }}>Get 30% OFF On Your Stretch</span>
-              <span className="text-white/50 text-[0.7rem] font-semibold uppercase tracking-[0.25em]">Limited Time Offer</span>
-            </div>
-
+            <HeroKeyPoints
+              points={[
+                "$65 first assessment",
+                "Black Rock Studio Melbourne",
+                "50-minute appointment",
+                "One-to-one stretch coach",
+                "Mobility assessment included",
+                "Confirmation call or SMS from our team",
+              ]}
+            />
             <div className="mt-7 flex flex-wrap items-center gap-4">
               <a
-                href="#book"
+                href="#help-that-fits"
                 className="inline-flex items-center gap-3 text-white font-bold px-8 py-4 rounded-full transition-all duration-200 hover:opacity-90"
                 style={{ backgroundColor: "#18a3dd", boxShadow: "0 8px 32px rgba(24,163,221,0.4)", fontFamily: "var(--font-raleway), sans-serif", fontSize: "1rem" }}
               >
-                Book My Assessment →
+                Learn More
+                <span className="relative flex h-2.5 w-2.5">
+                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-white opacity-75" />
+                  <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-white" />
+                </span>
               </a>
             </div>
           </div>

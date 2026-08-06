@@ -4,7 +4,7 @@ import { animate, motion } from "framer-motion";
 import { useEffect, useState } from "react";
 
 const stats = [
-  { value: 121, suffix: "+", label: "5-Star Google Reviews", stars: true },
+  { value: 126, suffix: "+", label: "5-Star Google Reviews", stars: true },
   { value: 10, suffix: "+ yrs", label: "Stretching Experience" },
   { value: 1000, suffix: "+", label: "People Stretched" },
 ];
@@ -44,10 +44,12 @@ function StatNumber({ to, suffix }: { to: number; suffix: string }) {
 
   return (
     <span
-      className="font-black leading-none"
+      className="relative inline-block whitespace-nowrap font-black leading-none tabular-nums"
       style={{ color: "#18a3dd", fontFamily: "var(--font-raleway), sans-serif", fontSize: "clamp(1.25rem, 4vw, 2.4rem)" }}
     >
-      {val}{suffix}
+      {/* Invisible final value reserves the full width so the count-up never reflows the bar */}
+      <span className="invisible" aria-hidden>{to}{suffix}</span>
+      <span className="absolute inset-0 text-right">{val}{suffix}</span>
     </span>
   );
 }

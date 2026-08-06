@@ -56,7 +56,7 @@ export default function PainPoints() {
   }, []);
 
   return (
-    <section className="relative py-16 md:py-24 px-6 bg-[#f8fbfe]">
+    <section id="help-that-fits" className="relative scroll-mt-20 py-16 md:py-24 px-6 bg-[#f8fbfe]">
       <div className="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden>
         <div className="absolute -top-40 -left-40 w-[700px] h-[700px] rounded-full" style={{ background: "radial-gradient(circle, rgba(24,163,221,0.1) 0%, transparent 65%)", filter: "blur(70px)" }} />
         <div className="absolute top-1/2 -right-60 w-[600px] h-[600px] rounded-full" style={{ background: "radial-gradient(circle, rgba(0,34,86,0.07) 0%, transparent 65%)", filter: "blur(90px)" }} />
@@ -67,11 +67,8 @@ export default function PainPoints() {
 
           {/* LEFT sticky */}
           <div className="md:sticky md:top-32">
-            <span className="text-xs font-bold tracking-[0.2em] uppercase text-[#18a3dd]" style={{ fontFamily: "var(--font-raleway), sans-serif" }}>
-              Sound Familiar?
-            </span>
             <h2
-              className="mt-5 font-black uppercase leading-tight text-[#1a1a2e]"
+              className="font-black uppercase leading-tight text-[#1a1a2e]"
               style={{ fontFamily: "var(--font-raleway), sans-serif", fontSize: "clamp(2.4rem, 4vw, 3.8rem)" }}
             >
               You're Not Looking<br />For Intensity.{" "}
