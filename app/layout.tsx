@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { Raleway, Open_Sans } from "next/font/google";
 import "./globals.css";
 // import ChatWidget from "./chat/ChatWidget"; // hidden for now
@@ -36,6 +37,13 @@ export default function RootLayout({
       <body className="min-h-full flex flex-col">
         {children}
         {/* <ChatWidget /> */}
+        <Script id="ms-clarity" strategy="afterInteractive">
+          {`(function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "wipay42e5e");`}
+        </Script>
       </body>
     </html>
   );
