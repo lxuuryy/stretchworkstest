@@ -4,9 +4,9 @@ import { animate, motion } from "framer-motion";
 import { useEffect, useState } from "react";
 
 const stats = [
-  { value: 126, suffix: "+", label: "5-Star Google Reviews", stars: true },
-  { value: 10, suffix: "+ yrs", label: "Stretching Experience" },
-  { value: 1000, suffix: "+", label: "People Stretched" },
+  { value: 150, suffix: "+", label: "5-Star Google Reviews", stars: true },
+  { value: 15000, suffix: "", label: "Stretches Delivered" },
+  { value: 3, suffix: " Years", label: "Serving Our Community" },
 ];
 
 const container = {
@@ -48,8 +48,8 @@ function StatNumber({ to, suffix }: { to: number; suffix: string }) {
       style={{ color: "#18a3dd", fontFamily: "var(--font-raleway), sans-serif", fontSize: "clamp(1.25rem, 4vw, 2.4rem)" }}
     >
       {/* Invisible final value reserves the full width so the count-up never reflows the bar */}
-      <span className="invisible" aria-hidden>{to}{suffix}</span>
-      <span className="absolute inset-0 text-right">{val}{suffix}</span>
+      <span className="invisible" aria-hidden>{to.toLocaleString("en-AU")}{suffix}</span>
+      <span className="absolute inset-0 text-right">{val.toLocaleString("en-AU")}{suffix}</span>
     </span>
   );
 }
