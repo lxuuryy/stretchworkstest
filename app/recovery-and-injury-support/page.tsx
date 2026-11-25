@@ -223,16 +223,19 @@ export default function RecoveryPage() {
           <div>
             <h4 className="text-white font-bold mb-4 text-xs uppercase tracking-widest" style={{ fontFamily: "var(--font-raleway), sans-serif" }}>Studio Hours</h4>
             <ul className="text-sm space-y-1.5 text-gray-400">
-              <li>Mon – Thu: 6:00 AM – 7:00 PM</li>
-              <li>Friday: 6:00 AM – 4:00 PM</li>
-              <li>Saturday: 7:00 AM – 3:00 PM</li>
-              <li className="text-gray-300">Sunday: Closed</li>
+              <li>Monday: 6:00 AM – 6:00 PM</li>
+              <li>Tuesday: 10:00 AM – 7:00 PM</li>
+              <li>Wednesday: 6:00 AM – 6:00 PM</li>
+              <li>Thursday: 6:00 AM – 8:00 PM</li>
+              <li>Friday: 7:00 AM – 3:00 PM</li>
+              <li>Saturday: 8:00 AM – 5:00 PM</li>
+              <li>Sunday: 10:00 AM – 5:00 PM</li>
             </ul>
           </div>
           <div>
             <h4 className="text-white font-bold mb-4 text-xs uppercase tracking-widest" style={{ fontFamily: "var(--font-raleway), sans-serif" }}><a href="/contact" className="hover:text-[#18a3dd] transition-colors">Contact</a></h4>
             <ul className="text-sm space-y-1.5 text-gray-400">
-              <li>0468 021 079</li>
+              <li>0485 017 423</li>
               <li className="break-all">studio.manager@stretchworks.com.au</li>
               <li>303B Beach Road, Black Rock VIC 3193</li>
             </ul>
